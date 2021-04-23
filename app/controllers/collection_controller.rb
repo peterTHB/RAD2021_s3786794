@@ -1,4 +1,7 @@
 class CollectionController < ApplicationController
+  def collection_index
+  end
+
   def women
   end
 
