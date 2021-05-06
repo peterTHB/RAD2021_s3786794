@@ -1,4 +1,7 @@
 <header class="navbar navbar-fixed-top navbar-inverse">
+  <div id="side-content">
+    <%= yield(:side_bar) %>
+  </div>
   <div class="container">
     <%= link_to "RAD App", "home", id: "logo" %>
     <nav>

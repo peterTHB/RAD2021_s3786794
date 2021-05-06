@@ -1,5 +1,8 @@
 <% provide(:title, "Home") %>
 <h1>Home</h1>
+<% content_for(:sidebar) do %>
+  <%= render :partial => "static_pages/sidebar" %>
+<% end %>
 <p>Basic homepage for all other items</p>
 <p>It is now <%= Time.now %></p>
 <p><%= link_to "Go to collections", "collection_index", class: "btn btn-lg btn-primary" %></p>
