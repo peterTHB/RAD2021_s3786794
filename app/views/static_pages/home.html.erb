@@ -2,39 +2,95 @@
 <%# content_for(:sidebar) do %>
   <%#= render :partial => "static_pages/sidebar" %>
 <%# end %>
-<h1>Home</h1>
 <!--Item from shop collection-->
-<div class="container">
-  <div id="shopCollectionCarousel" class="carousel slide" data-ride="carousel">
-    <ol class="carousel-indicators">
-      <li data-target="#shopCollectionCarousel" data-slide-to="0" class="active"></li>
-      <li data-target="#shopCollectionCarousel" data-slide-to="1"></li>
-      <li data-target="#shopCollectionCarousel" data-slide-to="2"></li>
-    </ol>
-    <div class="carousel-inner" role="listbox">
-      <div class="item active">
-        <%= image_tag("nargacuga.jpg", alt: "Nargacuga") %>
-      </div>
-      <div class="item">
-        <%= image_tag("lagiacrus.jpg", alt: "Lagiacrus") %>
-      </div>
-      <div class="item">
-        <%= image_tag("bracchidios.jpg", alt: "Bracchidios") %>
+<div id="collection_box">
+  <h1 id="collection_header">Collection</h1>
+  <div class="container_collection">
+    <div class="row">
+      <div class="col-xs-11 col-md-10 col-centered">
+        <div id="shopCollectionCarousel" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner" role="listbox">
+            <div class="item active">
+              <div class="carousel-col">
+                <%= image_tag("collection_test/nargacuga.jpg", alt: "Nargacuga") %>
+              </div>
+            </div>
+            <div class="item">
+              <div class="carousel-col">
+                <%= image_tag("collection_test/lagiacrus.jpg", alt: "Lagiacrus") %>
+              </div>
+            </div>
+            <div class="item">
+              <div class="carousel-col">
+                <%= image_tag("collection_test/bracchidios.jpg", alt: "Bracchidios") %>
+              </div>
+            </div>
+          </div>
+
+          <a class="left carousel-control" href="#shopCollectionCarousel" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="right carousel-control" href="#shopCollectionCarousel" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
       </div>
     </div>
-
-    <a class="left carousel-control" href="#shopCollectionCarousel" role="button" data-slide="prev">
-      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#shopCollectionCarousel" role="button" data-slide="next">
-      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
   </div>
 </div>
 
 <!--Item from popular-->
-<div>
+<div id="popular_box">
+  <h1>Popular</h1>
+  <div class="container_popular">
+    <div class="row">
+      <div class="col-xs-11 col-md-10 col-centered">
+        <div id="shopPopularCarousel" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner">
+            <div class="item active">
+              <div class="carousel-col">
+                <%= image_tag("popular_test/Prehistoric Trio.jpg", alt: "PreTrio") %>
+              </div>
+            </div>
+            <div class="item">
+              <div class="carousel-col">
+                <%= image_tag("popular_test/Trundle_Splash_0.jpg", alt: "Trundle") %>
+              </div>
+            </div>
+            <div class="item">
+              <div class="carousel-col">
+                <%= image_tag("popular_test/Vi_2.jpg", alt: "Vi") %>
+              </div>
+            </div>
+            <div class="item">
+              <div class="carousel-col">
+                <%= image_tag("popular_test/Warwick_4.jpg", alt: "Warwick") %>
+              </div>
+            </div>
+            <div class="item">
+              <div class="carousel-col">
+                <%= image_tag("popular_test/WW TH New Splash.jpg", alt: "WWTH") %>
+              </div>
+            </div>
+            <div class="item">
+              <div class="carousel-col">
+                <%= image_tag("popular_test/Zac_0.jpg", alt: "Zac") %>
+              </div>
+            </div>
+          </div>
 
+          <a class="left carousel-control" href="#shopPopularCarousel" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="right carousel-control" href="#shopPopularCarousel" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
