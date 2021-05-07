@@ -1,10 +1,34 @@
 <header class="navbar navbar-fixed-top navbar-inverse">
-  <div id="side-content">
-    <%= yield(:side_bar) %>
-  </div>
+<!--  <div id="side-content">-->
+    <%#= yield(:side_bar) %>
+<!--  </div>-->
+  <%# content_for(:sidebar) do %>
+    <%#= render :partial => "static_pages/sidebar" %>
+  <%# end %>
+
   <div class="container">
-    <%= link_to "RAD App", "home", id: "logo" %>
     <nav>
+      <ul class="nav navbar-nav navbar-left">
+        <div class="dropdown">
+          <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Menu
+          <span class="caret"></span></button>
+          <ul class="dropdown-menu">
+            <li><a href="women">Women</a></li>
+            <li><a href="men">Men</a></li>
+            <li><a href="kids">Kids</a></li>
+            <li><a href="new_arrivals">New Arrivals</a></li>
+            <li class="divider"></li>
+            <!--For collections-->
+            <li>Collections</li>
+            <li class="divider"></li>
+            <!--For help and support-->
+            <li>Help & Support</li>
+          </ul>
+        </div>
+      </ul>
+      <ul>
+        <%= link_to "Fashion App", "home", id: "logo" %>
+      </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>Current Header class</li>
       </ul>
