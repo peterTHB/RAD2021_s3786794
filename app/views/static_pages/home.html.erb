@@ -3,6 +3,38 @@
   <%#= render :partial => "static_pages/sidebar" %>
 <%# end %>
 <h1>Home</h1>
-<p>Basic homepage for all other items</p>
-<p>It is now <%= Time.now %></p>
-<p><%= link_to "Go to collections", "collection_index", class: "btn btn-lg btn-primary" %></p>
+<!--Item from shop collection-->
+<div class="container">
+  <div id="shopCollectionCarousel" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#shopCollectionCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#shopCollectionCarousel" data-slide-to="1"></li>
+      <li data-target="#shopCollectionCarousel" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <%= image_tag("nargacuga.jpg", alt: "Nargacuga") %>
+      </div>
+      <div class="item">
+        <%= image_tag("lagiacrus.jpg", alt: "Lagiacrus") %>
+      </div>
+      <div class="item">
+        <%= image_tag("bracchidios.jpg", alt: "Bracchidios") %>
+      </div>
+    </div>
+
+    <a class="left carousel-control" href="#shopCollectionCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#shopCollectionCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+
+<!--Item from popular-->
+<div>
+
+</div>
