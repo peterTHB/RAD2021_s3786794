@@ -13,9 +13,29 @@ class StaticPagesController < ApplicationController
     @womenImagesFiltered = @womenImagesFiltered.map { |url| "women_images/#{url}" }
     @kidsImagesFiltered = @kidsImagesFiltered.map { |url| "kids_images/#{url}" }
 
+    @menImagesFiltered.each do |n|
+      unless Image.exists?(url_name: n)
+        image = Image.create(url_name: n, human_type: "male", popular: 8, new_arrival: true)
+      end
+    end
+
+    @womenImagesFiltered.each do |n|
+      unless Image.exists?(url_name: n)
+        image = Image.create(url_name: n, human_type: "female", popular: 8, new_arrival: false)
+      end
+    end
+
+    @kidsImagesFiltered.each do |n|
+      unless Image.exists?(url_name: n)
+        image = Image.create(url_name: n, human_type: "kids", popular: 8, new_arrival: false)
+      end
+    end
+
     # puts @menImagesFiltered
     # puts @womenImagesFiltered
     # puts @kidsImagesFiltered
+
+
   end
 
   def help_support

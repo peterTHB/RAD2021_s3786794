@@ -6,7 +6,7 @@
   <thead>
     <tr>
       <th>Url name</th>
-      <th>Gender</th>
+      <th>Human type</th>
       <th>Popular</th>
       <th>New arrival</th>
       <th colspan="3"></th>
@@ -17,7 +17,7 @@
     <% @images.each do |image| %>
       <tr>
         <td><%= image.url_name %></td>
-        <td><%= image.gender %></td>
+        <td><%= image.human_type %></td>
         <td><%= image.popular %></td>
         <td><%= image.new_arrival %></td>
         <td><%= link_to 'Show', image %></td>

@@ -2,12 +2,12 @@
 
 one:
   url_name: MyString
-  gender: MyString
+  human_type: MyString
   popular: 1
   new_arrival: false
 
 two:
   url_name: MyString
-  gender: MyString
+  human_type: MyString
   popular: 1
   new_arrival: false

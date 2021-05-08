@@ -14,7 +14,7 @@ class ImagesTest < ApplicationSystemTestCase
     visit images_url
     click_on "New Image"
 
-    fill_in "Gender", with: @image.gender
+    fill_in "Human type", with: @image.human_type
     check "New arrival" if @image.new_arrival
     fill_in "Popular", with: @image.popular
     fill_in "Url name", with: @image.url_name
@@ -28,7 +28,7 @@ class ImagesTest < ApplicationSystemTestCase
     visit images_url
     click_on "Edit", match: :first
 
-    fill_in "Gender", with: @image.gender
+    fill_in "Human type", with: @image.human_type
     check "New arrival" if @image.new_arrival
     fill_in "Popular", with: @image.popular
     fill_in "Url name", with: @image.url_name
