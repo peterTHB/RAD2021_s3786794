@@ -1,17 +1,21 @@
 class StaticPagesController < ApplicationController
   def home
     #Change to hash
-    @collectionImages = Dir.entries("#{Rails.root}/app/assets/images/collection_test/")
-    @popularImages = Dir.entries("#{Rails.root}/app/assets/images/popular_test/")
+    @menImages = Dir.entries("#{Rails.root}/app/assets/images/men_images/")
+    @womenImages = Dir.entries("#{Rails.root}/app/assets/images/women_images/")
+    @kidsImages = Dir.entries("#{Rails.root}/app/assets/images/kids_images/")
 
-    @collectionImagesFiltered = @collectionImages.select { |image| image.match("\.(jpe?g|png)") }
-    @popularImagesFiltered = @popularImages.select { |image| image.match("\.(jpe?g|png)") }
+    @menImagesFiltered = @menImages.select { |image| image.match("\.(jpe?g|png)") }
+    @womenImagesFiltered = @womenImages.select { |image| image.match("\.(jpe?g|png)") }
+    @kidsImagesFiltered = @kidsImages.select { |image| image.match("\.(jpe?g|png)") }
 
-    @collectionImagesFiltered = @collectionImagesFiltered.map { |url| "collection_test/#{url}" }
-    @popularImagesFiltered = @popularImagesFiltered.map { |url| "popular_test/#{url}" }
+    @menImagesFiltered = @menImagesFiltered.map { |url| "men_images/#{url}" }
+    @womenImagesFiltered = @womenImagesFiltered.map { |url| "women_images/#{url}" }
+    @kidsImagesFiltered = @kidsImagesFiltered.map { |url| "kids_images/#{url}" }
 
-    puts @collectionImagesFiltered
-    puts @popularImagesFiltered
+    puts @menImagesFiltered
+    puts @womenImagesFiltered
+    puts @kidsImagesFiltered
   end
 
   def help_support

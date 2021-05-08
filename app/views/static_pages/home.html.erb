@@ -11,11 +11,11 @@
         <div id="shopCollectionCarousel" class="carousel slide" data-ride="carousel">
           <div class="carousel-inner" role="listbox">
             <div class="item active">
-              <%= image_tag @collectionImagesFiltered.first %>
+              <%= image_tag @womenImagesFiltered.first %>
             </div>
-            <% @collectionImagesFiltered.drop(1).each do |collect| %>
+            <% @womenImagesFiltered.drop(1).each do |women| %>
               <div class="item">
-                <%= image_tag collect %>
+                <%= image_tag women %>
               </div>
             <% end %>
           </div>
@@ -48,11 +48,16 @@
               </a>
             </div>
             <div class="item active">
-              <%= image_tag @popularImagesFiltered.first %>
+              <%= image_tag @menImagesFiltered.first %>
             </div>
-            <% @popularImagesFiltered.drop(1).each do |popular| %>
+            <% @menImagesFiltered.drop(1).each do |men| %>
               <div class="item">
-                <%= image_tag popular %>
+                <%= image_tag men %>
+              </div>
+            <% end %>
+            <% @kidsImagesFiltered.each do |kids| %>
+              <div class="item">
+                <%= image_tag kids %>
               </div>
             <% end %>
           </div>
