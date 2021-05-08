@@ -5,9 +5,11 @@ one:
   human_type: MyString
   popular: false
   new_arrival: false
+  saved_to_list: false
 
 two:
   url_name: MyString
   human_type: MyString
   popular: false
   new_arrival: false
+  saved_to_list: false

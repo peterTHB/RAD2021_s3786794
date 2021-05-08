@@ -9,6 +9,7 @@
       <th>Human type</th>
       <th>Popular</th>
       <th>New arrival</th>
+      <th>Saved to list</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -20,6 +21,7 @@
         <td><%= image.human_type %></td>
         <td><%= image.popular %></td>
         <td><%= image.new_arrival %></td>
+        <td><%= image.saved_to_list %></td>
         <td><%= link_to 'Show', image %></td>
         <td><%= link_to 'Edit', edit_image_path(image) %></td>
         <td><%= link_to 'Destroy', image, method: :delete, data: { confirm: 'Are you sure?' } %></td>

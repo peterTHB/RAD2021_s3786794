@@ -5,6 +5,7 @@ class CreateImages < ActiveRecord::Migration[5.2]
       t.string :human_type
       t.boolean :popular
       t.boolean :new_arrival
+      t.boolean :saved_to_list
 
       t.timestamps
     end

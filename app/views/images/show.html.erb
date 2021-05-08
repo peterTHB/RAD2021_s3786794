@@ -20,5 +20,10 @@
   <%= @image.new_arrival %>
 </p>
 
+<p>
+  <strong>Saved to list:</strong>
+  <%= @image.saved_to_list %>
+</p>
+
 <%= link_to 'Edit', edit_image_path(@image) %> |
 <%= link_to 'Back', images_path %>
