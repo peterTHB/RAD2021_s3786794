@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :images
   get '/home', to: 'static_pages#home'
   get '/women', to: 'collection#women'
   get '/men', to: 'collection#men'

@@ -13,9 +13,9 @@ class StaticPagesController < ApplicationController
     @womenImagesFiltered = @womenImagesFiltered.map { |url| "women_images/#{url}" }
     @kidsImagesFiltered = @kidsImagesFiltered.map { |url| "kids_images/#{url}" }
 
-    puts @menImagesFiltered
-    puts @womenImagesFiltered
-    puts @kidsImagesFiltered
+    # puts @menImagesFiltered
+    # puts @womenImagesFiltered
+    # puts @kidsImagesFiltered
   end
 
   def help_support

@@ -1,7 +1,4 @@
 <% provide(:title, "Home") %>
-<%# content_for(:sidebar) do %>
-  <%#= render :partial => "static_pages/sidebar" %>
-<%# end %>
 <!--Item from shop collection-->
 <div id="collection_box">
   <h1 id="collection_header">Collection</h1>
@@ -10,6 +7,11 @@
       <div class="col-xs-11 col-md-10 col-centered">
         <div id="shopCollectionCarousel" class="carousel slide" data-ride="carousel">
           <div class="carousel-inner" role="listbox">
+            <div class="carousel-caption">
+              <a id="plus_button">
+                <button type="button" class="btn medium-btn btn-secondary glyphicon glyphicon-plus-sign"></button>
+              </a>
+            </div>
             <div class="item active">
               <%= image_tag @womenImagesFiltered.first %>
             </div>
@@ -42,11 +44,6 @@
       <div class="col-xs-11 col-md-10 col-centered">
         <div id="shopPopularCarousel" class="carousel slide" data-ride="carousel">
           <div class="carousel-inner">
-            <div class="carousel-caption">
-              <a id="plus_button">
-                <button type="button" class="btn btn-secondary glyphicon glyphicon-plus-sign"></button>
-              </a>
-            </div>
             <div class="item active">
               <%= image_tag @menImagesFiltered.first %>
             </div>
