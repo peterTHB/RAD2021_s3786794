@@ -16,7 +16,7 @@ class ImagesTest < ApplicationSystemTestCase
 
     fill_in "Human type", with: @image.human_type
     check "New arrival" if @image.new_arrival
-    fill_in "Popular", with: @image.popular
+    check "Popular" if @image.popular
     fill_in "Url name", with: @image.url_name
     click_on "Create Image"
 
@@ -30,7 +30,7 @@ class ImagesTest < ApplicationSystemTestCase
 
     fill_in "Human type", with: @image.human_type
     check "New arrival" if @image.new_arrival
-    fill_in "Popular", with: @image.popular
+    check "Popular" if @image.popular
     fill_in "Url name", with: @image.url_name
     click_on "Update Image"
 

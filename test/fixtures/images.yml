@@ -3,11 +3,11 @@
 one:
   url_name: MyString
   human_type: MyString
-  popular: 1
+  popular: false
   new_arrival: false
 
 two:
   url_name: MyString
   human_type: MyString
-  popular: 1
+  popular: false
   new_arrival: false

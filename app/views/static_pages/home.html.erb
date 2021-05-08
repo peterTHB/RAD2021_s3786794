@@ -13,11 +13,11 @@
               </a>
             </div>
             <div class="item active">
-              <%= image_tag @womenImagesFiltered.first %>
+              <%= image_tag @collectionURLS.first %>
             </div>
-            <% @womenImagesFiltered.drop(1).each do |women| %>
+            <% @collectionURLS.drop(1).each do |item| %>
               <div class="item">
-                <%= image_tag women %>
+                <%= image_tag item %>
               </div>
             <% end %>
           </div>
@@ -45,16 +45,11 @@
         <div id="shopPopularCarousel" class="carousel slide" data-ride="carousel">
           <div class="carousel-inner">
             <div class="item active">
-              <%= image_tag @menImagesFiltered.first %>
+              <%= image_tag @popularURLS.first %>
             </div>
-            <% @menImagesFiltered.drop(1).each do |men| %>
+            <% @popularURLS.drop(1).each do |item| %>
               <div class="item">
-                <%= image_tag men %>
-              </div>
-            <% end %>
-            <% @kidsImagesFiltered.each do |kids| %>
-              <div class="item">
-                <%= image_tag kids %>
+                <%= image_tag item %>
               </div>
             <% end %>
           </div>
