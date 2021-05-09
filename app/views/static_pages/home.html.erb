@@ -2,7 +2,7 @@
 <!--Item from shop collection-->
 <div id="collection_box">
   <h1 id="collection_heading">Collection</h1>
-  <div class="container_collection">
+  <div class="collection_container">
     <div class="row">
       <div class="col-xs-6 col-md-8 col-centered">
         <div id="shopCollectionCarousel" data-ride="carousel" class="carousel-fade" data-interval="false">
@@ -11,19 +11,31 @@
               <a class="right carousel-control" href="#shopCollectionCarousel" role="button" data-slide="next">
                 <div class="button_img">
                   <%= button_to savedToList_static_pages_path, :class=> "changeImg" do %>
-                    <i id="buttonTest" type="button" class="glyphicon glyphicon-plus-sign"></i>
+                    <i id="buttonSave" type="button" class="glyphicon glyphicon-plus-sign"></i>
                   <% end %>
                 </div>
               </a>
             </div>
             <div class="item active">
-              <%= image_tag(@currentCollectionItem, width: "60%", class: "currImg img-responsive center-block",
-                            :alt=>@currentCollectionItem) %>
+              <%= image_tag(@collectionURLS.first, width: "60%", class: "currImg img-responsive center-block",
+                            :alt=>@collectionURLS.first) %>
+              <div class="carousel-caption d-none d-md-block">
+                <h5 id="collectionTitleText"><%= Image.where(url_name: @collectionURLS.first).pluck("title").first %></h5>
+                <p id="collectionCaptionAndPriceText"><%= Image.where(url_name: @collectionURLS.first).pluck("caption").first %>
+                  <br><%= Image.where(url_name: @collectionURLS.first).pluck("price").first %>
+                </p>
+              </div>
             </div>
             <% @collectionURLS.drop(1).each do |item| %>
               <div class="item">
                 <%= image_tag(item, width: "60%", class: "currImg img-responsive center-block",
                               :alt=>item) %>
+                <div class="carousel-caption d-none d-md-block">
+                  <h5 id="collectionTitleText"><%= Image.where(url_name: item).pluck("title").first %></h5>
+                  <p id="collectionCaptionAndPriceText"><%= Image.where(url_name: item).pluck("caption").first %>
+                    <br><%= Image.where(url_name: item).pluck("price").first %>
+                  </p>
+                </div>
               </div>
             <% end %>
           </div>

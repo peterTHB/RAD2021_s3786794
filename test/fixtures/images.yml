@@ -2,6 +2,9 @@
 
 one:
   url_name: MyString
+  title: MyString
+  caption: MyString
+  price: MyString
   human_type: MyString
   popular: false
   new_arrival: false
@@ -9,6 +12,9 @@ one:
 
 two:
   url_name: MyString
+  title: MyString
+  caption: MyString
+  price: MyString
   human_type: MyString
   popular: false
   new_arrival: false

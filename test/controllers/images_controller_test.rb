@@ -17,7 +17,7 @@ class ImagesControllerTest < ActionDispatch::IntegrationTest
 
   test "should create image" do
     assert_difference('Image.count') do
-      post images_url, params: { image: { human_type: @image.human_type, new_arrival: @image.new_arrival, popular: @image.popular, saved_to_list: @image.saved_to_list, url_name: @image.url_name } }
+      post images_url, params: { image: { caption: @image.caption, human_type: @image.human_type, new_arrival: @image.new_arrival, popular: @image.popular, price: @image.price, saved_to_list: @image.saved_to_list, title: @image.title, url_name: @image.url_name } }
     end
 
     assert_redirected_to image_url(Image.last)
@@ -34,7 +34,7 @@ class ImagesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update image" do
-    patch image_url(@image), params: { image: { human_type: @image.human_type, new_arrival: @image.new_arrival, popular: @image.popular, saved_to_list: @image.saved_to_list, url_name: @image.url_name } }
+    patch image_url(@image), params: { image: { caption: @image.caption, human_type: @image.human_type, new_arrival: @image.new_arrival, popular: @image.popular, price: @image.price, saved_to_list: @image.saved_to_list, title: @image.title, url_name: @image.url_name } }
     assert_redirected_to image_url(@image)
   end
 

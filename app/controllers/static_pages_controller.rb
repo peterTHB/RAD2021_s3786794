@@ -50,9 +50,6 @@ class StaticPagesController < ApplicationController
     @collectionURLS = @collectionURLS.shuffle
     @popularURLS = @popularURLS.shuffle
 
-    # @currentCollectionItem = @collectionURLS.first
-    # @@currentIndex = 0
-
     @@classCollectionURLS = @collectionURLS
     @currentCollectionItem = @@classCollectionURLS.first
     @@currentIndex = 0
@@ -61,9 +58,9 @@ class StaticPagesController < ApplicationController
   def savedToList
     @savedItem = @@classCollectionURLS.at(@@currentIndex)
 
-    #save to images model
-    # image = Image.find_by(url_name: @savedItem)
-    # image.update(saved_to_list: true)
+    image = Image.find_by(url_name: @savedItem)
+    image.saved_to_list = true
+    image.save
 
     puts @savedItem
 
@@ -75,10 +72,6 @@ class StaticPagesController < ApplicationController
 
     @currentCollectionItem = @@classCollectionURLS.at(@@currentIndex)
     puts @currentCollectionItem
-
-    image = @currentCollectionItem
-    image.saved_to_list = true
-    image.save
   end
 
   def help_support

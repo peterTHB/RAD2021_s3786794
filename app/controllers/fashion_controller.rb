@@ -11,8 +11,10 @@ class FashionController < ApplicationController
       @savedToListModel.append(item.url_name)
     end
 
-    # if @savedToListModel.empty?
-    #   @savedToListModel.append("No_Items")
-    # end
+    if @savedToListModel.empty?
+      @savedToListModel.append("no_item.png")
+    end
+
+
   end
 end

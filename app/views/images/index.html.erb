@@ -6,6 +6,9 @@
   <thead>
     <tr>
       <th>Url name</th>
+      <th>Title</th>
+      <th>Caption</th>
+      <th>Price</th>
       <th>Human type</th>
       <th>Popular</th>
       <th>New arrival</th>
@@ -18,6 +21,9 @@
     <% @images.each do |image| %>
       <tr>
         <td><%= image.url_name %></td>
+        <td><%= image.title %></td>
+        <td><%= image.caption %></td>
+        <td><%= image.price %></td>
         <td><%= image.human_type %></td>
         <td><%= image.popular %></td>
         <td><%= image.new_arrival %></td>

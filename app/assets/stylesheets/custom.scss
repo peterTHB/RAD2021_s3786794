@@ -64,11 +64,6 @@ header li {
   padding-right: 5px;
 }
 
-#plus_button {
-  //position: absolute;
-  //padding-left: 200px;
-}
-
 .medium-btn {
   width: 60px;
   height: 40px;
@@ -111,7 +106,7 @@ footer ul li {
   margin-top: 60px;
 }
 
-.container_collection {
+.collection_container {
   margin: auto;
 }
 
@@ -136,7 +131,7 @@ footer ul li {
   margin-right: 30px;
   margin-left: 30px;
   background-image: none;
-  opacity: 1;
+  opacity: 75%;
 }
 .carousel-control > a > span {
   color: white;
@@ -150,18 +145,10 @@ footer ul li {
   float: left;
 }
 
-#collection_box {
+#collection_box, #popular_box {
   background-color: gray;
-  padding: 10px;
+  padding: 5px;
   border: 5px solid black;
-}
-
-#popular_box {
-  background-color: gray;
-  padding: 10px;
-  border: 5px solid black;
-  //margin-right: 116px;
-  //margin-left: 117px;
 }
 
 .container_img {
@@ -188,8 +175,20 @@ footer ul li {
   border-radius: 5px;
 }
 
-#buttonTest {
+.changeImg {
+  padding: 5px;
+}
+
+#buttonSave {
   width: 20px;
   height: 20px;
 }
 
+#collectionTitleText,
+#collectionCaptionAndPriceText {
+  margin-right: 300px;
+  color: black;
+  background-color: white;
+  border-radius: 40%;
+  padding: 15px;
+}

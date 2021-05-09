@@ -14,10 +14,13 @@ class ImagesTest < ApplicationSystemTestCase
     visit images_url
     click_on "New Image"
 
+    fill_in "Caption", with: @image.caption
     fill_in "Human type", with: @image.human_type
     check "New arrival" if @image.new_arrival
     check "Popular" if @image.popular
+    fill_in "Price", with: @image.price
     check "Saved to list" if @image.saved_to_list
+    fill_in "Title", with: @image.title
     fill_in "Url name", with: @image.url_name
     click_on "Create Image"
 
@@ -29,10 +32,13 @@ class ImagesTest < ApplicationSystemTestCase
     visit images_url
     click_on "Edit", match: :first
 
+    fill_in "Caption", with: @image.caption
     fill_in "Human type", with: @image.human_type
     check "New arrival" if @image.new_arrival
     check "Popular" if @image.popular
+    fill_in "Price", with: @image.price
     check "Saved to list" if @image.saved_to_list
+    fill_in "Title", with: @image.title
     fill_in "Url name", with: @image.url_name
     click_on "Update Image"
 
