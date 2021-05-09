@@ -75,9 +75,12 @@ class StaticPagesController < ApplicationController
 
     @currentCollectionItem = @@classCollectionURLS.at(@@currentIndex)
     puts @currentCollectionItem
+
+    image = @currentCollectionItem
+    image.saved_to_list = true
+    image.save
   end
 
   def help_support
-
   end
 end

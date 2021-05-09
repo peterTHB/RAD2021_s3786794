@@ -3,7 +3,6 @@
 <div id="collection_box">
   <h1 id="collection_heading">Collection</h1>
   <div class="container_collection">
-<!--    <button id="buttonTest" type="button" class="testButton"></button>-->
     <div class="row">
       <div class="col-xs-6 col-md-8 col-centered">
         <div id="shopCollectionCarousel" data-ride="carousel" class="carousel-fade" data-interval="false">
@@ -28,16 +27,6 @@
               </div>
             <% end %>
           </div>
-<!--          <div class="container_img">-->
-<!--            <div class="url_image">-->
-              <%#= image_tag(@currentCollectionItem, width: "60%", class: "currImg img-responsive center-block", :alt=>@currentCollectionItem) %>
-<!--            </div>-->
-<!--            <div class="button_img">-->
-              <%#= button_to savedToList_static_pages_path, :class=> "changeImg" do %>
-<!--                <i class="glyphicon glyphicon-plus-sign"></i>-->
-              <%# end %>
-<!--            </div>-->
-<!--          </div>-->
         </div>
       </div>
     </div>
@@ -78,7 +67,6 @@
 
 <script>
   $('#buttonTest').on("click", function(e){
-      console.log("CLICKED ON BUTTON");
       e.preventDefault();
       $.ajax("/static_pages/savedToList")
   });

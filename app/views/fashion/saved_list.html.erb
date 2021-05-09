@@ -6,14 +6,15 @@
       <div id="savedList" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
           <div class="item active">
-            <img src="..." class="d-block w-100" alt="...">
+            <%= image_tag(@savedToListModel.first, width: "60%", class: "currImg img-responsive center-block",
+                          :alt=>@savedToListModel) %>
           </div>
-          <div class="item">
-            <img src="..." class="d-block w-100" alt="...">
-          </div>
-          <div class="item">
-            <img src="..." class="d-block w-100" alt="...">
-          </div>
+          <% @savedToListModel.drop(1).each do |item| %>
+            <div class="item">
+              <%= image_tag(item, width: "60%", class: "currImg img-responsive center-block",
+                            :alt=>item) %>
+            </div>
+          <% end %>
         </div>
 
         <a class="left carousel-control" href="#savedList" role="button" data-slide="prev">
