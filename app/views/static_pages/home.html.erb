@@ -12,7 +12,7 @@
               <a class="right carousel-control" href="#shopCollectionCarousel" role="button" data-slide="next">
                 <div class="button_img">
                   <%= button_to savedToList_static_pages_path, :class=> "changeImg" do %>
-                    <i class="glyphicon glyphicon-plus-sign"></i>
+                    <i id="buttonTest" type="button" class="glyphicon glyphicon-plus-sign"></i>
                   <% end %>
                 </div>
               </a>
@@ -77,14 +77,9 @@
 </div>
 
 <script>
-  // $('button_to').on("click", function(e){
-  //     document.write("CLICKED ON BUTTON")
-  //     e.preventDefault();
-  //     $("img").attr("src", $(this).attr("/kids_images/edward-cisneros-r_Tnjj6TB30-unsplash.jpg"))
-  // });
-  $('.testButton').on("click", function(e){
-      console.log("CLICKED ON BUTTON")
-      $(".currImg").attr("src", $(this).attr("/kids_images/edward-cisneros-r_Tnjj6TB30-unsplash.jpg"))
+  $('#buttonTest').on("click", function(e){
+      console.log("CLICKED ON BUTTON");
       e.preventDefault();
+      $.ajax("/static_pages/savedToList")
   });
 </script>
