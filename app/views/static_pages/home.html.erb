@@ -3,32 +3,41 @@
 <div id="collection_box">
   <h1 id="collection_heading">Collection</h1>
   <div class="container_collection">
+<!--    <button id="buttonTest" type="button" class="testButton"></button>-->
     <div class="row">
-      <%#= button_to 'Press me', savedToList_static_pages_path, method: :post %>
       <div class="col-xs-6 col-md-8 col-centered">
-<!--        <div id="shopCollectionCarousel" data-ride="carousel" class="carousel-fade" data-interval="false">-->
-<!--          <div class="carousel-inner" role="listbox">-->
-<!--            <div class="carousel-caption">-->
-<!--              <a class="right carousel-control" href="#shopCollectionCarousel" role="button" data-slide="next">-->
-<!--                <button type="submit", value="Saved">-->
-                  <%#= button_to "", savedToList_static_pages_path, method: :post %>
-<!--                  <span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span>-->
-<!--                </button>-->
-<!--              </a>-->
-<!--            </div>-->
-<!--            <div class="item active">-->
-              <%#= image_tag @collectionURLS.first %>
-<!--            </div>-->
-            <%# @collectionURLS.drop(1).each do |item| %>
-<!--              <div class="item">-->
-                <%#= image_tag item %>
-<!--              </div>-->
-            <%# end %>
-<!--          </div>-->
-          <div id="image">
-            <%= image_tag(@collectionURLS.first, width: "60%", class: "img-responsive center-block") %>
-            <%= button_to 'Press me', savedToList_static_pages_path, method: :post %>
+        <div id="shopCollectionCarousel" data-ride="carousel" class="carousel-fade" data-interval="false">
+          <div class="carousel-inner" role="listbox">
+            <div class="carousel-caption">
+              <a class="right carousel-control" href="#shopCollectionCarousel" role="button" data-slide="next">
+                <div class="button_img">
+                  <%= button_to savedToList_static_pages_path, :class=> "changeImg" do %>
+                    <i class="glyphicon glyphicon-plus-sign"></i>
+                  <% end %>
+                </div>
+              </a>
+            </div>
+            <div class="item active">
+              <%= image_tag(@currentCollectionItem, width: "60%", class: "currImg img-responsive center-block",
+                            :alt=>@currentCollectionItem) %>
+            </div>
+            <% @collectionURLS.drop(1).each do |item| %>
+              <div class="item">
+                <%= image_tag(item, width: "60%", class: "currImg img-responsive center-block",
+                              :alt=>item) %>
+              </div>
+            <% end %>
           </div>
+<!--          <div class="container_img">-->
+<!--            <div class="url_image">-->
+              <%#= image_tag(@currentCollectionItem, width: "60%", class: "currImg img-responsive center-block", :alt=>@currentCollectionItem) %>
+<!--            </div>-->
+<!--            <div class="button_img">-->
+              <%#= button_to savedToList_static_pages_path, :class=> "changeImg" do %>
+<!--                <i class="glyphicon glyphicon-plus-sign"></i>-->
+              <%# end %>
+<!--            </div>-->
+<!--          </div>-->
         </div>
       </div>
     </div>
@@ -66,3 +75,16 @@
     </div>
   </div>
 </div>
+
+<script>
+  // $('button_to').on("click", function(e){
+  //     document.write("CLICKED ON BUTTON")
+  //     e.preventDefault();
+  //     $("img").attr("src", $(this).attr("/kids_images/edward-cisneros-r_Tnjj6TB30-unsplash.jpg"))
+  // });
+  $('.testButton').on("click", function(e){
+      console.log("CLICKED ON BUTTON")
+      $(".currImg").attr("src", $(this).attr("/kids_images/edward-cisneros-r_Tnjj6TB30-unsplash.jpg"))
+      e.preventDefault();
+  });
+</script>

@@ -38,7 +38,6 @@ class StaticPagesController < ApplicationController
     @popularURLS = Array.new
 
     @currentCollectionItem = ""
-    @savedItem = ""
 
     Image.find_each do |item|
       @collectionURLS.append(item.url_name)
@@ -55,6 +54,8 @@ class StaticPagesController < ApplicationController
     # @@currentIndex = 0
 
     @@classCollectionURLS = @collectionURLS
+    @currentCollectionItem = @@classCollectionURLS.first
+    @@currentIndex = 0
   end
 
   def savedToList
@@ -73,6 +74,7 @@ class StaticPagesController < ApplicationController
     end
 
     @currentCollectionItem = @@classCollectionURLS.at(@@currentIndex)
+    puts @currentCollectionItem
   end
 
   def help_support
