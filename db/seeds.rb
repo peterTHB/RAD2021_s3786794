@@ -32,7 +32,7 @@ Image.create(url_name: "women_images/tamara-bellis-3t6rfsCaWiQ-unsplash.jpg", ti
              caption:"Dress to please the eyes", price:"$32.99", human_type: "female", popular: false,
              new_arrival: false, saved_to_list: false)
 
-Image.create(url_name: "kids_images/edward-cisneros-r_Tnjj6TB30-unsplash.jpg", title:"Autumn Duos",
+Image.create(url_name: "kids_images/ben-white-EMZxDosijJ4-unsplash.jpg", title:"Autumn Duos",
              caption:"A set for kids", price:"$52.99", human_type: "kids", popular: false, new_arrival: false,
              saved_to_list: false)
 Image.create(url_name: "kids_images/sander-weeteling-Itbk3pUYhpY-unsplash.jpg", title:"Playful Autumn",
