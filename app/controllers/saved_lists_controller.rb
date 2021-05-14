@@ -2,6 +2,8 @@ class SavedListsController < ApplicationController
   before_action :set_saved_list, only: %i[ show edit update destroy ]
   # has_many :images
 
+  @@currentSavedItem = new Image
+
   # GET /saved_lists or /saved_lists.json
   def index
     @saved_lists = SavedList.all

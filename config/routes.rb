@@ -18,6 +18,8 @@ Rails.application.routes.draw do
   get '/help&support', to: 'static_pages#help&support'
   get 'static_pages/savedToList', to: 'static_pages#savedToList'
   post 'static_pages/savedToList', to: 'static_pages#savedToList'
+  get 'static_pages/savedOffList', to: 'static_pages#savedOffList'
+  post 'static_pages/savedOffList', to: 'static_pages#savedOffList'
   root 'static_pages#home'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

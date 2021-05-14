@@ -1,7 +1,6 @@
 <% provide(:title, "Home") %>
 <!--Item from shop collection-->
 <div id="collection_box">
-  <h1 id="collection_heading">Collection</h1>
   <div class="collection_container">
     <div class="row">
       <div class="col-xs-6 col-md-8 col-centered">
@@ -78,10 +77,22 @@
   </div>
 </div>
 
-<!--Newsletter-->
-<!--<div class="newsletter">-->
+<div class="collection_groups_box">
+  <h1 id="collection_groups_heading">Collection</h1>
+  <p><%= link_to "Go to women", "women", class: "btn btn-lg btn-primary" %></p>
+  <p><%= link_to "Go to men", "men", class: "btn btn-lg btn-primary" %></p>
+  <p><%= link_to "Go to kids", "kids", class: "btn btn-lg btn-primary" %></p>
+  <p><%= link_to "Go to new arrivals", "new_arrivals", class: "btn btn-lg btn-primary" %></p>
+</div>
 
-<!--</div>-->
+<!--Newsletter-->
+<div class="newsletter">
+  <h1 id="newsletter_heading">Newsletter</h1>
+  <h4 id="newsletter_caption">Signup with our newsletter</h4>
+  <div class="newsletter_container">
+
+  </div>
+</div>
 
 <script>
   $('#buttonSave').on("click", function(e){
