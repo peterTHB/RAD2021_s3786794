@@ -6,7 +6,7 @@ Rails.application.initialize!
 
 # ActionMailer::Base.smtp_settings = {
 #   :user_name => 'apikey',
-#   :password => '',
+#   :password => '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',
 #   :domain => "https://hidden-refuge-64928.herokuapp.com/",
 #   :address => 'smtp.sendgrid.net',
 #   :port => 587,
