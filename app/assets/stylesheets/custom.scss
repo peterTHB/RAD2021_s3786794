@@ -9,8 +9,13 @@
   margin-bottom: 12px;
 }
 
+#image_heading, #collection_view_heading {
+  padding-top: 60px;
+}
+
 #collection_heading {
   margin-top: 60px;
+  margin-bottom: -20px;
   letter-spacing: -1px;
   text-align: center;
 }
@@ -69,10 +74,6 @@ header li {
   height: 40px;
 }
 
-.carousel-inner {
-  position: relative;
-}
-
 footer {
   margin-top: 45px;
   padding-top: 5px;
@@ -102,26 +103,100 @@ footer ul li {
   margin-left: 15px;
 }
 
-#collection_header {
-  margin-top: 60px;
-}
-
-.collection_container {
+.collection_container, .popular_container, .women_page_container {
   overflow: hidden;
-  //margin: auto;
+  margin: auto;
 }
 
-.popular_container {
+#collection_box, #popular_box {
+  background-color: gray;
+  padding: 5px;
+  border: 5px solid black;
+  margin: auto;
+}
+
+.container_img {
+  position: relative;
+  width: 100%;
+}
+
+.url_image {
+  width: 100%;
+  height: auto;
+}
+
+.button_img {
+  position: relative;
+  transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  padding: 12px 24px;
+}
+
+.changeImg {
+  padding: 5px;
+}
+
+#buttonSave {
+  width: 40px;
+  height: 40px;
+}
+
+.glyphicon.glyphicon-plus-sign {
+  font-size: 40px;
+}
+
+.btnSaveToList {
+  padding: 10px;
+}
+
+.collection_caption_tgt {
+  //margin-bottom: 60px;
+}
+
+.item_title, .item_caption, .item_price {
+  color: black;
+  background-color: grey;
+  position: relative;
+  text-align: center;
+  padding-bottom: 5px;
+  opacity: .8;
+}
+
+.selection_to_save {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  object-fit: fill;
+  position: absolute;
+  padding-top: 50px;
+}
+
+.popular_items {
+  display: block;
+  object-fit: fill;
+  float: left;
+  width: 100%;
+}
+
+.currImg {
+  height: 300px;
+  //overflow: hidden;
+  margin-bottom: 5px;
+}
+
+.popular_image_in_frame {
+  height: 400px;
   overflow: hidden;
-  //margin: auto;
-  //padding-left: 70px;
-  //padding-right: 75px;
 }
 
-// Testing online code
+// Code from W3Schools tutorial for carousels
 .col-centered {
   float: none;
   margin: 0 auto;
+}
+
+.carousel-inner {
+  position: relative;
 }
 
 .carousel-control {
@@ -146,62 +221,19 @@ footer ul li {
   padding: 5px;
   float: left;
 }
+// Code collection ends here
 
-#collection_box, #popular_box {
-  background-color: gray;
-  padding: 5px;
-  border: 5px solid black;
+h3 {
+  float: right;
 }
 
-.container_img {
-  position: relative;
-  width: 100%;
-}
-
-.url_image {
-  width: 100%;
-  height: auto;
-}
-
-.button_img {
-  position: absolute;
-  transform: translate(-100%, -50%);
-  -ms-transform: translate(-100%, -50%);
-  padding: 12px 24px;
-}
-
-.changeImg {
-  padding: 5px;
-}
-
-#buttonSave {
-  width: 20px;
-  height: 20px;
-}
-
-.item_title, .item_caption, .item_price {
-  color: black;
-  background-color: grey;
-  position: relative;
+.collect_caption {
+  padding-top: 10px;
   text-align: center;
+  font-size: 16px;
 }
 
-.selection_to_save {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  object-fit: fill;
-  position: absolute;
-  padding-top: 50px;
-}
-
-.popular_items {
-  display: block;
-  object-fit: fill;
-  float: left;
-}
-
-.img {
+.carousel-inner-item-collection > .item > img {
+  width: 75%;
   height: 600px;
 }
-

@@ -1,2 +1,0 @@
-class SavedList < ApplicationRecord
-end

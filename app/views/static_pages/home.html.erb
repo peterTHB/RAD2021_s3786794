@@ -1,13 +1,17 @@
+<head>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+</head>
+
 <% provide(:title, "Home") %>
 <!--Item from shop collection-->
 <div id="collection_box">
-  <h1 id="popular_heading">Items</h1>
+  <h1 id="collection_heading">Items</h1>
   <div class="collection_container">
     <div class="row">
-      <div class="col-xs-6 col-md-8 col-centered">
+      <div class="col-xs-12 col-md-10 col-lg-8 col-centered">
         <div id="shopCollectionCarousel" data-ride="carousel" class="carousel-fade" data-interval="false">
-          <div class="carousel-inner" role="listbox">
-            <div class="carousel-caption">
+          <div class="carousel-inner-item-collection carousel-inner" role="listbox">
+            <div class="btnSaveToList carousel-caption">
               <a class="right carousel-control" href="#shopCollectionCarousel" role="button" data-slide="next">
                 <div class="button_img">
                   <%= button_to savedToList_static_pages_path, :class=> "changeImg" do %>
@@ -19,7 +23,7 @@
             <div class="selection_to_save item active">
               <%= image_tag(@collectionURLS.first, class: "currImg img-responsive center-block",
                             :alt=>@collectionURLS.first) %>
-              <div class="carousel-caption d-none d-md-block">
+              <div class="collection_caption_tgt carousel-caption d-none d-md-block">
                 <div class="item_title"><%= Image.where(url_name: @collectionURLS.first).pluck("title").first %></div>
                 <div class="item_caption"><%= Image.where(url_name: @collectionURLS.first).pluck("caption").first %></div>
                 <div class="item_price"><%= Image.where(url_name: @collectionURLS.first).pluck("price").first %></div>
@@ -27,9 +31,8 @@
             </div>
             <% @collectionURLS.drop(1).each do |item| %>
               <div class="selection_to_save item">
-                <%= image_tag(item, class: "currImg img-responsive center-block",
-                              :alt=>item) %>
-                <div class="carousel-caption d-none d-md-block">
+                <%= image_tag(item, class: "currImg img-responsive center-block", :alt=>item) %>
+                <div class="collection_caption_tgt carousel-caption d-none d-md-block">
                   <div class="item_title"><%= Image.where(url_name: item).pluck("title").first %></div>
                   <div class="item_caption"><%= Image.where(url_name: item).pluck("caption").first %></div>
                   <div class="item_price"><%= Image.where(url_name: item).pluck("price").first %></div>
@@ -47,16 +50,15 @@
 <div class="container" id="popular_box">
   <h1 id="popular_heading">Popular</h1>
   <div class="popular_container">
-    <div class="row" id="myCarousel">
-      <div class="col-xs-12 col-md-12 col-lg-12 col-centered">
+    <div class="row">
+      <div class="col-xs-12 col-md-10 col-lg-8 col-centered">
         <div id="shopPopularCarousel" class="carousel slide multi-item-carousel
-            carousel-fade carousel_popular_change" data-type="multi" data-interval="false" data-ride="carousel">
+            carousel-fade" data-type="multi" data-interval="false" data-ride="carousel">
           <div class="carousel-inner">
             <div class="popular_items item active">
               <div class="col-xs-4 ">
-                <a target="_blank" href="#">
-                  <%= image_tag(@popularURLS.first, class: "img-responsive center-block", :alt=>@popularURLS.first) %>
-                </a>
+                <%= image_tag(@popularURLS.first, class: "popular_image_in_frame img-responsive center-block",
+                              :alt=>@popularURLS.first) %>
                 <div class="item_title"><%= Image.where(url_name: @popularURLS.first).pluck("title").first %></div>
                 <div class="item_price"><%= Image.where(url_name: @popularURLS.first).pluck("price").first %></div>
               </div>
@@ -64,9 +66,7 @@
             <% @popularURLS.drop(1).each do |item| %>
               <div class="popular_items item">
                 <div class="col-xs-4">
-                  <a target="_blank" href="#">
-                    <%= image_tag(item, class: "img-responsive center-block", :alt=>item) %>
-                  </a>
+                  <%= image_tag(item, class: "popular_image_in_frame img-responsive center-block", :alt=>item) %>
                   <div class="item_title"><%= Image.where(url_name: item).pluck("title").first %></div>
                   <div class="item_price"><%= Image.where(url_name: item).pluck("price").first %></div>
                 </div>
@@ -90,10 +90,40 @@
 
 <div class="collection_groups_box">
   <h1 id="collection_groups_heading">Collection</h1>
-  <p><%= link_to "Go to women", "women", class: "btn btn-lg btn-primary" %></p>
-  <p><%= link_to "Go to men", "men", class: "btn btn-lg btn-primary" %></p>
-  <p><%= link_to "Go to kids", "kids", class: "btn btn-lg btn-primary" %></p>
-  <p><%= link_to "Go to new arrivals", "new_arrivals", class: "btn btn-lg btn-primary" %></p>
+<!--  <a href="collection_index">-->
+    <!--  <h3 id="seeAllButton">See all</h3>-->
+<!--  </a>-->
+  <div class="collection_container">
+    <div class="row">
+      <div class="col-xs-12 col-md-12 col-lg-12 col-centered">
+        <div class="col-xs-3 ">
+          <a href="women">
+            <%= image_tag(@femaleURLS.first, class: "img-responsive center-block", :alt=>@femaleURLS.first) %>
+          </a>
+          <div class="collect_caption">Women</div>
+        </div>
+        <div class="col-xs-3 ">
+          <!--target:"_blank"-->
+          <a href="men">
+            <%= image_tag(@menURLS.first, class: "img-responsive center-block", :alt=>@menURLS.first) %>
+          </a>
+          <div class="collect_caption">Men</div>
+        </div>
+        <div class="col-xs-3 ">
+          <a href="kids">
+            <%= image_tag(@kidsURLS.first, class: "img-responsive center-block", :alt=>@kidsURLS.first) %>
+          </a>
+          <div class="collect_caption">Kids</div>
+        </div>
+        <div class="col-xs-3 ">
+          <a href="new_arrivals">
+            <%= image_tag(@newArrivalsURLS.first, class: "img-responsive center-block", :alt=>@newArrivalsURLS.first) %>
+          </a>
+          <div class="collect_caption">New Arrivals</div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
 <!--Newsletter-->
@@ -111,24 +141,27 @@
       $.ajax("/static_pages/savedToList")
   });
 
+  // Code borrowed from multiple Codepen.io users for multiple images on
+  // a carousel frame
   // Instantiate the Bootstrap carousel
   $('.multi-item-carousel').carousel({
       interval: false
   });
 
-  // for every slide in carousel, copy the next slide's item in the slide.
-  // Do the same for the next, next item.
-  $('.multi-item-carousel .item').each(function(){
+  $('.carousel[data-type="multi"] .item').each(function() {
       var next = $(this).next();
       if (!next.length) {
           next = $(this).siblings(':first');
       }
       next.children(':first-child').clone().appendTo($(this));
 
-      if (next.next().length>0) {
-          next.next().children(':first-child').clone().appendTo($(this));
-      } else {
-          $(this).siblings(':first').children(':first-child').clone().appendTo($(this));
+      for (var i = 0; i < 1; i++) {
+          next = next.next();
+          if (!next.length) {
+              next = $(this).siblings(':first');
+          }
+
+          next.children(':first-child').clone().appendTo($(this));
       }
   });
 </script>

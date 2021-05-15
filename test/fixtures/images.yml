@@ -6,7 +6,7 @@ one:
   caption: MyString
   price: MyString
   human_type: MyString
-  popular: false
+  popular: 1
   new_arrival: false
   saved_to_list: false
 
@@ -16,6 +16,6 @@ two:
   caption: MyString
   price: MyString
   human_type: MyString
-  popular: false
+  popular: 1
   new_arrival: false
   saved_to_list: false

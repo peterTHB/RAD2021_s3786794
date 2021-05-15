@@ -2,22 +2,24 @@
   <div class="container">
     <nav>
       <ul class="nav navbar-nav navbar-left">
-        <div class="dropdown">
-          <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
-          <span class="glyphicon glyphicon-th-list"></span></button>
-          <ul class="dropdown-menu">
-            <li><a href="women">Women</a></li>
-            <li><a href="men">Men</a></li>
-            <li><a href="kids">Kids</a></li>
-            <li><a href="new_arrivals">New Arrivals</a></li>
-            <li class="divider"></li>
-            <!--For collections-->
-            <li><a href="saved_list">Saved List</a></li>
-            <li class="divider"></li>
-            <!--For help and support-->
-            <li><a href="help&support">Help & Support</a></li>
-          </ul>
-        </div>
+        <li class="dropdownList">
+          <div class="dropdown">
+            <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+              <span class="glyphicon glyphicon-th-list"></span></button>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="women">Women</a></li>
+              <li><a href="men">Men</a></li>
+              <li><a href="kids">Kids</a></li>
+              <li><a href="new_arrivals">New Arrivals</a></li>
+              <li class="divider"></li>
+              <!--For collections-->
+              <li><a href="saved_list">Saved List</a></li>
+              <li class="divider"></li>
+              <!--For help and support-->
+              <li><a href="help&support">Help & Support</a></li>
+            </ul>
+          </div>
+        </li>
       </ul>
       <ul>
         <%= link_to "Fashion App", "home", id: "logo"%>

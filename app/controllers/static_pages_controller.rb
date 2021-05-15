@@ -5,15 +5,30 @@ class StaticPagesController < ApplicationController
   def home
     @collectionURLS = Array.new
     @popularURLS = Array.new
+    @femaleURLS = Array.new
+    @menURLS = Array.new
+    @kidsURLS = Array.new
+    @newArrivalsURLS = Array.new
 
     @currentCollectionItem = ""
 
     Image.find_each do |item|
       @collectionURLS.append(item.url_name)
-    end
-
-    Image.where(popular: true).find_each do |item|
-      @popularURLS.append(item.url_name)
+      if item.popular >= 8
+        @popularURLS.append(item.url_name)
+      end
+      if item.human_type == "female"
+        @femaleURLS.append(item.url_name)
+      end
+      if item.human_type == "male"
+        @menURLS.append(item.url_name)
+      end
+      if item.human_type == "kids"
+        @kidsURLS.append(item.url_name)
+      end
+      if item.new_arrival == true
+        @newArrivalsURLS.append(item.url_name)
+      end
     end
 
     @collectionURLS = @collectionURLS.shuffle

@@ -1,4 +1,22 @@
+<head>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+</head>
+
 <% provide(:title, "Women") %>
-<h1>Women's Collection</h1>
-<p>Find me in app/views/collection/women.html.erb</p>
-<p><%= link_to "Return to collections", "collection_index", class: "btn btn-lg btn-primary" %></p>
+<h1 id="collection_view_heading">Women's Collection</h1>
+<div id="collection_box">
+  <div class="women_page_container">
+    <div class="row">
+      <% @womenURLS.each do |item| %>
+<!--        <div class="col-sm-3">-->
+        <div class="col-xs-12 col-sm-6 col-lg-6">
+          <div class="container_image">
+            <%= image_tag(item, class: "fashion_image img-responsive", :alt=>item) %>
+            <div class="desc"><%= Image.where(url_name: item).pluck("title").first %></div>
+            <div class="price"><%= Image.where(url_name: item).pluck("price").first %></div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

@@ -1,20 +1,23 @@
+<head>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+</head>
+
 <% provide(:title, "Collections") %>
 <h1>Collections</h1>
-<p>Find me in app/views/collection/collection_index.html.erb</p>
-<p><%= link_to "Go to women", "women", class: "btn btn-lg btn-primary" %></p>
-<p><%= link_to "Go to men", "men", class: "btn btn-lg btn-primary" %></p>
-<p><%= link_to "Go to kids", "kids", class: "btn btn-lg btn-primary" %></p>
-<p><%= link_to "Go to new arrivals", "new_arrivals", class: "btn btn-lg btn-primary" %></p>
-<p><%= link_to "Return to home", "home", class: "btn btn-lg btn-primary" %></p>
-
-<!--<div class="row">-->
-<!--  <div class="col-xs-6 col-md-8 col-lg-12 col-centered">-->
-    <%# @popularURLS.each do |item| %>
-<!--      <div class="gallery">-->
-        <!--          <a target="_blank" href=<%#= item %>>-->
-        <%#= image_tag(item, class: "img-responsive center-block", :alt=>item) %>
-        <!--          </a>-->
-<!--      </div>-->
-    <%# end %>
-<!--  </div>-->
-<!--</div>-->
+<div id="collection_box">
+  <div class="collection_page_container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-10 col-lg-8">
+        <div class="col-sm-6">
+          <div class="container_image">
+            <% @allCollectionsURLS.each do |item| %>
+              <%= image_tag(item, class: "img-responsive", :alt=>item) %>
+              <div class="desc"><%= Image.where(url_name: item).pluck("title").first %></div>
+              <div class="price"><%= Image.where(url_name: item).pluck("price").first %></div>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

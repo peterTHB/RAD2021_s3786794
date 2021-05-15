@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  resources :saved_lists
   resources :images
   resources :static_pages do
     collection do

@@ -6,7 +6,7 @@ class CreateImages < ActiveRecord::Migration[5.2]
       t.string :caption
       t.string :price
       t.string :human_type
-      t.boolean :popular
+      t.integer :popular
       t.boolean :new_arrival
       t.boolean :saved_to_list
 

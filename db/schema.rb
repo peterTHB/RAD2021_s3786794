@@ -21,15 +21,9 @@ ActiveRecord::Schema.define(version: 2021_05_09_145140) do
     t.string "caption"
     t.string "price"
     t.string "human_type"
-    t.boolean "popular"
+    t.integer "popular"
     t.boolean "new_arrival"
     t.boolean "saved_to_list"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "saved_lists", force: :cascade do |t|
-    t.string "url_name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
