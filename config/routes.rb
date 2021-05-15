@@ -26,6 +26,7 @@ Rails.application.routes.draw do
   post 'fashion/savedToListOrNot', to: 'fashion#savedToListOrNot'
   post 'fashion/moveForward', to: 'fashion#moveForward'
   post 'fashion/moveBackward', to: 'fashion#moveBackward'
-  root 'static_pages#home'
+  # root 'static_pages#home'
+  root 'fashion#saved_list'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

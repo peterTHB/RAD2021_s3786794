@@ -14,6 +14,7 @@ class StaticPagesController < ApplicationController
 
     @currentCollectionItem = ""
 
+    #Error here
     Image.find_each do |item|
       @collectionURLS.append(item.url_name)
       if item.popular >= 8
