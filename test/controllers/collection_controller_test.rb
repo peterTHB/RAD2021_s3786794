@@ -2,22 +2,22 @@ require 'test_helper'
 
 class CollectionControllerTest < ActionDispatch::IntegrationTest
   test "should get women" do
-    get collection_women_url
+    get women_path
     assert_response :success
   end
 
   test "should get men" do
-    get collection_men_url
+    get men_path
     assert_response :success
   end
 
   test "should get kids" do
-    get collection_kids_url
+    get kids_path
     assert_response :success
   end
 
   test "should get new_arrivals" do
-    get collection_new_arrivals_url
+    get new_arrivals_path
     assert_response :success
   end
 
