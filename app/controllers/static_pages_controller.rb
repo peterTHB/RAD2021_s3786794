@@ -1,4 +1,6 @@
 class StaticPagesController < ApplicationController
+  default :from => 'any_from_address@example.com'
+
   @@classCollectionURLS = Array.new
   @@currentIndex = 0
 
@@ -59,5 +61,11 @@ class StaticPagesController < ApplicationController
   end
 
   def help_support
+  end
+
+  def send_signup_email(user)
+    @user = user
+    mail( :to => @user.email,
+          :subject => 'Thanks for signing up for our Fashion App')
   end
 end
