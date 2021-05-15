@@ -8,8 +8,8 @@
           <div class="carousel-caption">
 <!--            <a class="right carousel-control" href="#savedList" role="button" data-slide="next">-->
               <div class="button_img">
-                <%= button_to static_pages_savedOffList_path, :class=> "changeImg" do %>
-                  <i id="buttonOffSave" type="button" class="glyphicon glyphicon-plus-sign"></i>
+                <%= button_to fashion_savedToListOrNot_path, :class=> "changeImg" do %>
+                  <i id="buttonSaveCheck" type="button" class="glyphicon glyphicon-plus-sign"></i>
                 <% end %>
               </div>
 <!--            </a>-->
@@ -40,16 +40,19 @@
 </div>
 
 <script>
-    $('#buttonOffSave').on("click", function(e){
+    $('#buttonSaveCheck').on("click", function(e){
+        console.log("Button save Check clicked")
         e.preventDefault();
-        $.ajax("/static_pages/savedToListOrNot")
+        $.ajax("/fashion/savedToListOrNot")
     });
     $('#leftControl').on("click", function(e){
+        console.log("Left Control clicked")
         e.preventDefault();
-        $.ajax("/static_pages/moveBackward")
+        $.ajax("/fashion/moveBackward")
     })
     $('#rightControl').on("click", function(e){
+        console.log("Right Control clicked")
         e.preventDefault();
-        $.ajax("/static_pages/moveForward")
+        $.ajax("/fashion/moveForward")
     })
 </script>

@@ -33,7 +33,7 @@ class StaticPagesController < ApplicationController
 
     puts @savedItem
 
-    if @@currentIndex < @@classCollectionURLS.length
+    if @@currentIndex < @@classCollectionURLS.length - 1
       @@currentIndex = @@currentIndex + 1
     else
       @@currentIndex = 0

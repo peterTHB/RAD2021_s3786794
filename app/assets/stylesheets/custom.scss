@@ -107,13 +107,15 @@ footer ul li {
 }
 
 .collection_container {
-  margin: auto;
+  overflow: hidden;
+  //margin: auto;
 }
 
 .popular_container {
-  margin: auto;
-  padding-left: 200px;
-  padding-right: 200px;
+  overflow: hidden;
+  //margin: auto;
+  //padding-left: 70px;
+  //padding-right: 75px;
 }
 
 // Testing online code
@@ -163,16 +165,9 @@ footer ul li {
 
 .button_img {
   position: absolute;
-  top: 90%;
-  left: 65%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  color: white;
-  font-size: 24px;
+  transform: translate(-100%, -50%);
+  -ms-transform: translate(-100%, -50%);
   padding: 12px 24px;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
 }
 
 .changeImg {
@@ -184,17 +179,29 @@ footer ul li {
   height: 20px;
 }
 
-#collectionTitleText,
-#collectionCaptionAndPriceText {
-  margin-right: 300px;
+.item_title, .item_caption, .item_price {
   color: black;
-  background-color: white;
-  border-radius: 40%;
-  padding: 15px;
+  background-color: grey;
+  position: relative;
+  text-align: center;
 }
 
-img {
-  width: 600px;
-  height:600px;
-  object-fit: cover;
+.selection_to_save {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  object-fit: fill;
+  position: absolute;
+  padding-top: 50px;
 }
+
+.popular_items {
+  display: block;
+  object-fit: fill;
+  float: left;
+}
+
+.img {
+  height: 600px;
+}
+

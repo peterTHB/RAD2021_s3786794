@@ -1,11 +1,9 @@
 class FashionController < ApplicationController
-  @@imageSavedList = new Array
-  @@currentSavedItem = new Image
+  @@imageSavedList
+  @@currentSavedItem
   @@currentIndex = 0
 
   def index
-    @message = 'Hello!'
-    @extra = 'I am the fashion controller '
   end
 
   def saved_list
@@ -28,10 +26,9 @@ class FashionController < ApplicationController
   def savedToListOrNot
     @currentImageInCarousel = @@imageSavedList.at(@@currentIndex)
 
-    Image.find_by(url_name: @currentImageInCarousel).saved_to_list =
-      !Image.find_by(url_name: @currentImageInCarousel).saved_to_list
-
-    Image.find_by(url_name: @currentImageInCarousel).save
+    image = Image.find_by(url_name: @currentImageInCarousel)
+    image.saved_to_list = !image.saved_to_list
+    image.save
   end
 
   def moveForward
