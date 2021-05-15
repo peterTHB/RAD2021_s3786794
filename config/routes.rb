@@ -5,6 +5,13 @@ Rails.application.routes.draw do
       get :savedToList
     end
   end
+  resources :fashion do
+    collection do
+      get :savedToListOrNot
+      get :moveForward
+      get :moveBackward
+    end
+  end
   get '/home', to: 'static_pages#home'
   get '/women', to: 'collection#women'
   get '/men', to: 'collection#men'

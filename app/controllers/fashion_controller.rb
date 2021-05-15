@@ -3,9 +3,6 @@ class FashionController < ApplicationController
   @@currentSavedItem
   @@currentIndex = 0
 
-  def index
-  end
-
   def saved_list
     @savedToListModel = Array.new
 

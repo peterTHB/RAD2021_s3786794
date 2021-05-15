@@ -3,41 +3,41 @@
 </head>
 
 <% provide(:title, "Saved List") %>
-<h1>Saved List</h1>
-<div class="container_popular">
-  <div class="row">
-    <div class="col-xs-11 col-md-10 col-centered">
-      <div id="savedList" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-caption">
-<!--            <a class="right carousel-control" href="#savedList" role="button" data-slide="next">-->
-              <div class="button_img">
-                <%= button_to fashion_savedToListOrNot_path, :class=> "changeImg" do %>
+<h1 id="savedListHeading">Saved List</h1>
+<div id="collection_box" >
+  <div class="container_popular">
+    <div class="row">
+      <div class="col-xs-12 col-md-10 col-lg-8 col-centered">
+        <div id="savedList" class="carousel slide" data-ride="carousel" data-interval="false">
+          <div class="carousel-inner-saved-collection carousel-inner">
+            <div class="carousel-caption">
+              <div class="button_img_saved_list">
+                <%= button_to fashion_savedToListOrNot_path, :class=> "changeImg", :method=> :post do %>
                   <i id="buttonSaveCheck" type="button" class="glyphicon glyphicon-plus-sign"></i>
                 <% end %>
               </div>
-<!--            </a>-->
-          </div>
-          <div class="item active">
-            <%= image_tag(@savedToListModel.first, width: "60%", class: "currImg img-responsive center-block",
-                          :alt=>@savedToListModel) %>
-          </div>
-          <% @savedToListModel.drop(1).each do |item| %>
-            <div class="item">
-              <%= image_tag(item, width: "60%", class: "currImg img-responsive center-block",
-                            :alt=>item) %>
             </div>
-          <% end %>
-        </div>
+            <div class="item active">
+              <%= image_tag(@savedToListModel.first, width: "60%", class: "currImg img-responsive center-block",
+                            :alt=>@savedToListModel) %>
+            </div>
+            <% @savedToListModel.drop(1).each do |item| %>
+              <div class="item">
+                <%= image_tag(item, width: "60%", class: "currImg img-responsive center-block",
+                              :alt=>item) %>
+              </div>
+            <% end %>
+          </div>
 
-        <a id="leftControl" class="left carousel-control" href="#savedList" role="button" data-slide="prev">
-          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a id="rightControl" class="right carousel-control" href="#savedList" role="button" data-slide="next">
-          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
+          <a id="leftControl" class="left carousel-control" href="#savedList" role="button" methods="post" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a id="rightControl" class="right carousel-control" href="#savedList" role="button" methods="post" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
       </div>
     </div>
   </div>
@@ -45,17 +45,14 @@
 
 <script>
     $('#buttonSaveCheck').on("click", function(e){
-        console.log("Button save Check clicked")
         e.preventDefault();
         $.ajax("/fashion/savedToListOrNot")
     });
     $('#leftControl').on("click", function(e){
-        console.log("Left Control clicked")
         e.preventDefault();
         $.ajax("/fashion/moveBackward")
     })
     $('#rightControl').on("click", function(e){
-        console.log("Right Control clicked")
         e.preventDefault();
         $.ajax("/fashion/moveForward")
     })

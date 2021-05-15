@@ -20,6 +20,22 @@
 
 .fashion_image {
   width: 100%;
-  height: 400px;
+  height: 500px;
   object-fit: cover;
+}
+
+#savedListHeading {
+  padding-top: 50px;
+}
+
+.carousel-inner-saved-collection > .item > img {
+  width: 75%;
+  height: 600px;
+}
+
+.button_img_saved_list {
+  position: relative;
+  transform: translate(50%, -50%);
+  -ms-transform: translate(50%, -50%);
+  padding: 12px 24px;
 }

@@ -47,7 +47,7 @@
 </div>
 
 <!--Item from popular-->
-<div class="container" id="popular_box">
+<div class="popular_container_box" id="collection_box">
   <h1 id="popular_heading">Popular</h1>
   <div class="popular_container">
     <div class="row">
@@ -88,38 +88,42 @@
   </div>
 </div>
 
-<div class="collection_groups_box">
-  <h1 id="collection_groups_heading">Collection</h1>
-<!--  <a href="collection_index">-->
-    <!--  <h3 id="seeAllButton">See all</h3>-->
-<!--  </a>-->
-  <div class="collection_container">
-    <div class="row">
-      <div class="col-xs-12 col-md-12 col-lg-12 col-centered">
-        <div class="col-xs-3 ">
-          <a href="women">
-            <%= image_tag(@femaleURLS.first, class: "img-responsive center-block", :alt=>@femaleURLS.first) %>
-          </a>
-          <div class="collect_caption">Women</div>
-        </div>
-        <div class="col-xs-3 ">
-          <!--target:"_blank"-->
-          <a href="men">
-            <%= image_tag(@menURLS.first, class: "img-responsive center-block", :alt=>@menURLS.first) %>
-          </a>
-          <div class="collect_caption">Men</div>
-        </div>
-        <div class="col-xs-3 ">
-          <a href="kids">
-            <%= image_tag(@kidsURLS.first, class: "img-responsive center-block", :alt=>@kidsURLS.first) %>
-          </a>
-          <div class="collect_caption">Kids</div>
-        </div>
-        <div class="col-xs-3 ">
-          <a href="new_arrivals">
-            <%= image_tag(@newArrivalsURLS.first, class: "img-responsive center-block", :alt=>@newArrivalsURLS.first) %>
-          </a>
-          <div class="collect_caption">New Arrivals</div>
+<div id="collection_box">
+  <div class="collection_groups_box">
+    <div class="collection_heading_combo" style="clear: both">
+      <h1 id="collection_groups_heading">Collection</h1>
+      <a href="collection_index">
+        <h3 id="seeAllButton">See all</h3>
+      </a>
+    </div>
+    <hr/>
+    <div class="collection_container">
+      <div class="row">
+        <div class="col-xs-12 col-md-12 col-lg-12 col-centered">
+          <div class="col-xs-3 ">
+            <a href="women">
+              <%= image_tag(@femaleURLS.first, class: "img-responsive center-block", :alt=>@femaleURLS.first) %>
+            </a>
+            <div class="collect_caption">Women</div>
+          </div>
+          <div class="col-xs-3 ">
+            <a href="men">
+              <%= image_tag(@menURLS.first, class: "img-responsive center-block", :alt=>@menURLS.first) %>
+            </a>
+            <div class="collect_caption">Men</div>
+          </div>
+          <div class="col-xs-3 ">
+            <a href="kids">
+              <%= image_tag(@kidsURLS.first, class: "img-responsive center-block", :alt=>@kidsURLS.first) %>
+            </a>
+            <div class="collect_caption">Kids</div>
+          </div>
+          <div class="col-xs-3 ">
+            <a href="new_arrivals">
+              <%= image_tag(@newArrivalsURLS.first, class: "img-responsive center-block", :alt=>@newArrivalsURLS.first) %>
+            </a>
+            <div class="collect_caption">New Arrivals</div>
+          </div>
         </div>
       </div>
     </div>
@@ -160,7 +164,6 @@
           if (!next.length) {
               next = $(this).siblings(':first');
           }
-
           next.children(':first-child').clone().appendTo($(this));
       }
   });
