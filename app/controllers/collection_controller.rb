@@ -34,8 +34,10 @@ class CollectionController < ApplicationController
   def new_arrivals
     @newArrivalsURLS = Array.new
 
-    Image.where(new_arrival: true).find_each do |item|
-      @newArrivalsURLS.append(item.url_name)
+    Image.find_each do |item|
+      if item.arrival <= 3
+        @newArrivalsURLS.append(item.url_name)
+      end
     end
   end
 end

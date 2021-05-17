@@ -7,7 +7,7 @@ one:
   price: MyString
   human_type: MyString
   popular: 1
-  new_arrival: false
+  arrival: 1
   saved_to_list: false
 
 two:
@@ -17,5 +17,5 @@ two:
   price: MyString
   human_type: MyString
   popular: 1
-  new_arrival: false
+  arrival: 1
   saved_to_list: false

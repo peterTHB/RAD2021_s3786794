@@ -14,9 +14,9 @@ class ImagesTest < ApplicationSystemTestCase
     visit images_url
     click_on "New Image"
 
+    fill_in "Arrival", with: @image.arrival
     fill_in "Caption", with: @image.caption
     fill_in "Human type", with: @image.human_type
-    check "New arrival" if @image.new_arrival
     fill_in "Popular", with: @image.popular
     fill_in "Price", with: @image.price
     check "Saved to list" if @image.saved_to_list
@@ -32,9 +32,9 @@ class ImagesTest < ApplicationSystemTestCase
     visit images_url
     click_on "Edit", match: :first
 
+    fill_in "Arrival", with: @image.arrival
     fill_in "Caption", with: @image.caption
     fill_in "Human type", with: @image.human_type
-    check "New arrival" if @image.new_arrival
     fill_in "Popular", with: @image.popular
     fill_in "Price", with: @image.price
     check "Saved to list" if @image.saved_to_list

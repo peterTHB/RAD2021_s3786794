@@ -2,6 +2,19 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.collections_individual_heading_combo {
+  padding-top: 80px;
+}
+
 #collection_view_heading {
-  padding-top: 50px;
+  display: inline;
+}
+
+#collection_see_all {
+  display: inline;
+  float: right;
+}
+
+#seeAllLink:hover {
+  color: grey;
 }

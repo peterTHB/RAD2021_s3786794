@@ -29,7 +29,7 @@ class StaticPagesController < ApplicationController
       if item.human_type == "kids"
         @kidsURLS.append(item.url_name)
       end
-      if item.new_arrival == true
+      if item.arrival <= 3
         @newArrivalsURLS.append(item.url_name)
       end
     end

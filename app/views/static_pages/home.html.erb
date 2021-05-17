@@ -105,24 +105,28 @@
               <%= image_tag(@femaleURLS.first, class: "img-responsive center-block", :alt=>@femaleURLS.first) %>
             </a>
             <div class="collect_caption">Women</div>
+            <div class="collect_caption"><%= @femaleURLS.length %> Items</div>
           </div>
           <div class="col-xs-3 ">
             <a href="men">
               <%= image_tag(@menURLS.first, class: "img-responsive center-block", :alt=>@menURLS.first) %>
             </a>
             <div class="collect_caption">Men</div>
+            <div class="collect_caption"><%= @menURLS.length %> Items</div>
           </div>
           <div class="col-xs-3 ">
             <a href="kids">
               <%= image_tag(@kidsURLS.first, class: "img-responsive center-block", :alt=>@kidsURLS.first) %>
             </a>
             <div class="collect_caption">Kids</div>
+            <div class="collect_caption"><%= @kidsURLS.length %> Items</div>
           </div>
           <div class="col-xs-3 ">
             <a href="new_arrivals">
               <%= image_tag(@newArrivalsURLS.first, class: "img-responsive center-block", :alt=>@newArrivalsURLS.first) %>
             </a>
             <div class="collect_caption">New Arrivals</div>
+            <div class="collect_caption"><%= @newArrivalsURLS.length %> Items</div>
           </div>
         </div>
       </div>
