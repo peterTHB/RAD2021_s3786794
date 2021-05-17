@@ -15,7 +15,6 @@
 
 #collection_heading {
   margin-top: 60px;
-  margin-bottom: -20px;
   letter-spacing: -1px;
   text-align: center;
 }
@@ -148,10 +147,6 @@ footer ul li {
   padding: 10px;
 }
 
-.collection_caption_tgt {
-  //margin-bottom: 60px;
-}
-
 .item_title, .item_caption, .item_price {
   color: black;
   background-color: grey;
@@ -175,6 +170,7 @@ footer ul li {
   object-fit: fill;
   float: left;
   width: 100%;
+
 }
 
 .currImg {

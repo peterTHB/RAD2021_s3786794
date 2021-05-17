@@ -1,6 +1,7 @@
-<head>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-</head>
+<!--<head>-->
+<!--  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>-->
+<!--  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>-->
+<!--</head>-->
 
 <% provide(:title, "Home") %>
 <!--Item from shop collection-->
@@ -20,7 +21,7 @@
                 </div>
               </a>
             </div>
-            <div class="selection_to_save item active">
+            <div class="collection_item_box selection_to_save item active">
               <%= image_tag(@collectionURLS.first, class: "currImg img-responsive center-block",
                             :alt=>@collectionURLS.first) %>
               <div class="collection_caption_tgt carousel-caption d-none d-md-block">
@@ -30,7 +31,7 @@
               </div>
             </div>
             <% @collectionURLS.drop(1).each do |item| %>
-              <div class="selection_to_save item">
+              <div class="collection_item_box selection_to_save item">
                 <%= image_tag(item, class: "currImg img-responsive center-block", :alt=>item) %>
                 <div class="collection_caption_tgt carousel-caption d-none d-md-block">
                   <div class="item_title"><%= Image.where(url_name: item).pluck("title").first %></div>
@@ -55,7 +56,7 @@
         <div id="shopPopularCarousel" class="carousel slide multi-item-carousel
             carousel-fade" data-type="multi" data-interval="false" data-ride="carousel">
           <div class="carousel-inner">
-            <div class="popular_items item active">
+            <div class="popular_item_box popular_items item active">
               <div class="col-xs-4 ">
                 <%= image_tag(@popularURLS.first, class: "popular_image_in_frame img-responsive center-block",
                               :alt=>@popularURLS.first) %>
@@ -64,7 +65,7 @@
               </div>
             </div>
             <% @popularURLS.drop(1).each do |item| %>
-              <div class="popular_items item">
+              <div class="popular_item_box popular_items item">
                 <div class="col-xs-4">
                   <%= image_tag(item, class: "popular_image_in_frame img-responsive center-block", :alt=>item) %>
                   <div class="item_title"><%= Image.where(url_name: item).pluck("title").first %></div>
@@ -100,28 +101,28 @@
     <div class="collection_container">
       <div class="row">
         <div class="col-xs-12 col-md-12 col-lg-12 col-centered">
-          <div class="col-xs-3 ">
+          <div class="collection_item_box col-xs-3">
             <a href="women">
               <%= image_tag(@femaleURLS.first, class: "img-responsive center-block", :alt=>@femaleURLS.first) %>
             </a>
             <div class="collect_caption">Women</div>
             <div class="collect_caption"><%= @femaleURLS.length %> Items</div>
           </div>
-          <div class="col-xs-3 ">
+          <div class="collection_item_box col-xs-3">
             <a href="men">
               <%= image_tag(@menURLS.first, class: "img-responsive center-block", :alt=>@menURLS.first) %>
             </a>
             <div class="collect_caption">Men</div>
             <div class="collect_caption"><%= @menURLS.length %> Items</div>
           </div>
-          <div class="col-xs-3 ">
+          <div class="collection_item_box col-xs-3">
             <a href="kids">
               <%= image_tag(@kidsURLS.first, class: "img-responsive center-block", :alt=>@kidsURLS.first) %>
             </a>
             <div class="collect_caption">Kids</div>
             <div class="collect_caption"><%= @kidsURLS.length %> Items</div>
           </div>
-          <div class="col-xs-3 ">
+          <div class="collection_item_box col-xs-3">
             <a href="new_arrivals">
               <%= image_tag(@newArrivalsURLS.first, class: "img-responsive center-block", :alt=>@newArrivalsURLS.first) %>
             </a>
@@ -135,12 +136,13 @@
 </div>
 
 <!--Newsletter-->
-<div class="newsletter">
-  <h1 id="newsletter_heading">Newsletter</h1>
-  <h4 id="newsletter_caption">Signup with our newsletter</h4>
-<!--  <p><%#= @user.name %></p>-->
-  <div class="newsletter_container">
+<div id="collection_box">
+  <div class="newsletter">
+    <h1 id="newsletter_heading">Newsletter</h1>
+    <h4 id="newsletter_caption">Signup with our newsletter</h4>
+    <div class="newsletter_container">
 
+    </div>
   </div>
 </div>
 

@@ -9,3 +9,9 @@
 #collection_groups_heading, #seeAllButton {
   display: inline-block;
 }
+
+.collection_item_box, .popular_item_box {
+  background-color: white;
+  padding: 2px;
+  border: 3px solid black;
+}
