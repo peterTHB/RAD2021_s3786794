@@ -1,5 +1,7 @@
 class StaticPagesController < ApplicationController
-  # default :from => 'any_from_address@example.com'
+  respond_to :js, :json, :html
+  require 'sendgrid-ruby'
+  include SendGrid
 
   @@classCollectionURLS = Array.new
   @@currentIndex = 0
@@ -49,8 +51,6 @@ class StaticPagesController < ApplicationController
     image.saved_to_list = true
     image.save
 
-    puts @savedItem
-
     if @@currentIndex < @@classCollectionURLS.length - 1
       @@currentIndex = @@currentIndex + 1
     else
@@ -58,15 +58,25 @@ class StaticPagesController < ApplicationController
     end
 
     @currentCollectionItem = @@classCollectionURLS.at(@@currentIndex)
-    puts @currentCollectionItem
   end
 
   def help_support
   end
 
-  # def send_signup_email(user)
-  #   @user = user
-  #   mail( :to => @user.email,
-  #         :subject => 'Thanks for signing up for our Fashion App')
-  # end
+  def sendEmail
+    @email = params[:emailTyped]
+    puts @email
+    puts "Got to SENDEMAIL"
+    # from = Email.new(email: 's3786794@student.rmit.edu.au')
+    # to = Email.new(email: @email)
+    # subject = 'RAD2021 Assignment 2 Subscription'
+    # content = Content.new(type: 'text/plain', value: 'Thanks for subscribing!')
+    # mail = Mail.new(from, subject, to, content)
+    #
+    # sg = SendGrid::API.new(api_key: ENV['SENDGRID_API_KEY'])
+    # response = sg.client.mail._('send').post(request_body: mail.to_json)
+    # puts response.status_code
+    # puts response.body
+    # puts response.headers
+  end
 end

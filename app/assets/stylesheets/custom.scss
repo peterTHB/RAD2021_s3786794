@@ -9,21 +9,15 @@
   margin-bottom: 12px;
 }
 
-.popular_container_box {
-  margin-left: 20px;
-}
-
-#collection_heading {
-  margin-top: 60px;
-  letter-spacing: -1px;
-  text-align: center;
-}
-
-#popular_heading {
-  margin-top: 40px;
-  letter-spacing: -1px;
-  text-align: center;
-}
+//.popular_container_box {
+//  margin-left: 20px;
+//}
+//
+//#collection_heading, #popular_heading {
+//  margin-top: 40px;
+//  letter-spacing: -1px;
+//  text-align: center;
+//}
 
 h2 {
   font-size: 1.2em;
@@ -101,7 +95,10 @@ footer ul li {
   margin-left: 15px;
 }
 
-.collection_container, .popular_container, .women_page_container {
+.collection_container, .popular_container,
+.women_page_container .new_arrivals_page_container,
+.kids_page_container, .men_page_container,
+.all_collections_page_container {
   overflow: hidden;
   margin: auto;
 }
@@ -147,7 +144,7 @@ footer ul li {
   padding: 10px;
 }
 
-.item_title, .item_caption, .item_price {
+.item_title, .item_caption, .item_price, .item_saved {
   color: black;
   background-color: grey;
   position: relative;
@@ -175,14 +172,13 @@ footer ul li {
 
 .currImg {
   height: 300px;
-  //overflow: hidden;
   margin-bottom: 5px;
 }
 
-.popular_image_in_frame {
-  height: 400px;
-  overflow: hidden;
-}
+//.popular_image_in_frame {
+//  height: 400px;
+//  overflow: hidden;
+//}
 
 // Code from W3Schools tutorial for carousels
 .col-centered {

@@ -16,11 +16,15 @@
             <div class="item active">
               <%= image_tag(@savedToListModel.first, width: "60%", class: "currImg img-responsive center-block",
                             :alt=>@savedToListModel) %>
+              <div class="item_title"><%= Image.where(url_name: @savedToListModel.first).pluck("title").first %></div>
+              <div class="item_price"><%= Image.where(url_name: @savedToListModel.first).pluck("price").first %></div>
             </div>
             <% @savedToListModel.drop(1).each do |item| %>
               <div class="item">
                 <%= image_tag(item, width: "60%", class: "currImg img-responsive center-block",
                               :alt=>item) %>
+                <div class="item_title"><%= Image.where(url_name: item).pluck("title").first %></div>
+                <div class="item_price"><%= Image.where(url_name: item).pluck("price").first %></div>
               </div>
             <% end %>
           </div>
@@ -38,18 +42,3 @@
     </div>
   </div>
 </div>
-
-<script>
-    $('#buttonSaveCheck').on("click", function(e){
-        e.preventDefault();
-        $.ajax("/fashion/savedToListOrNot")
-    });
-    $('#leftControl').on("click", function(e){
-        e.preventDefault();
-        $.ajax("/fashion/moveBackward")
-    })
-    $('#rightControl').on("click", function(e){
-        e.preventDefault();
-        $.ajax("/fashion/moveForward")
-    })
-</script>

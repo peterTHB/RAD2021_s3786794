@@ -2,6 +2,7 @@
 <!--Item from shop collection-->
 <div id="collection_box">
   <h1 id="collection_heading">Items</h1>
+  <hr/>
   <div class="collection_container">
     <div class="row">
       <div class="col-xs-12 col-md-10 col-lg-8 col-centered">
@@ -45,6 +46,7 @@
 <!--Item from popular-->
 <div class="popular_container_box" id="collection_box">
   <h1 id="popular_heading">Popular</h1>
+  <hr/>
   <div class="popular_container">
     <div class="row">
       <div class="col-xs-12 col-md-10 col-lg-8 col-centered">
@@ -84,6 +86,7 @@
   </div>
 </div>
 
+<!--All collection types-->
 <div id="collection_box">
   <div class="collection_groups_box">
     <div class="collection_heading_combo" style="clear: both">
@@ -136,17 +139,15 @@
     <h1 id="newsletter_heading">Newsletter</h1>
     <h4 id="newsletter_caption">Signup with our newsletter</h4>
     <div class="newsletter_container">
-
+      <%= form_tag action: 'sendEmail' do %>
+        <p class="emailText">Enter email: <%= text_field_tag 'emailTyped', @email %> </p>
+        <div class="submitEmailBtn"><%= submit_tag 'Submit', :id => "emailSent", :class=> "btn", data: {disable_with: false} %></div>
+      <% end %>
     </div>
   </div>
 </div>
 
 <script>
-  $('#buttonSave').on("click", function(e){
-      e.preventDefault();
-      $.ajax("/static_pages/savedToList")
-  });
-
   // Code borrowed from multiple Codepen.io users for multiple images on
   // a carousel frame
   // Instantiate the Bootstrap carousel

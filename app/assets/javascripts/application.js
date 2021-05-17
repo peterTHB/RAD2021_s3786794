@@ -18,3 +18,22 @@
 //= require_tree .
 //= require bootstrap-sprockets
 //= require bootstrap
+
+$(document).on("click",'#buttonSave', function(){
+    $.ajax("/static_pages/savedToList")
+});
+
+$(document).on("click", '#buttonSaveCheck', function(e){
+    e.preventDefault();
+    $.ajax("/fashion/savedToListOrNot")
+});
+
+$(document).on("click", '#leftControl', function(e){
+    e.preventDefault();
+    $.ajax("/fashion/moveBackward")
+})
+
+$(document).on("click", '#rightControl', function(e){
+    e.preventDefault();
+    $.ajax("/fashion/moveForward")
+})

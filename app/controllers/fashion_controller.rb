@@ -1,6 +1,5 @@
 class FashionController < ApplicationController
   @@imageSavedList
-  @@currentSavedItem
   @@currentIndex = 0
 
   def saved_list
@@ -14,10 +13,9 @@ class FashionController < ApplicationController
       @savedToListModel.append("no_item.png")
     else
       @@imageSavedList = @savedToListModel
-      @@currentSavedItem = @savedToListModel.at(0)
       @@currentIndex = 0
+      @currIfSaved = "Saved";
     end
-
   end
 
   def savedToListOrNot

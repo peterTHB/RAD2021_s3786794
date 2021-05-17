@@ -2,6 +2,21 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.popular_container_box {
+  margin-left: 20px;
+}
+
+#collection_heading, #popular_heading {
+  margin-top: 40px;
+  letter-spacing: -1px;
+  text-align: center;
+}
+
+.popular_image_in_frame {
+  height: 400px;
+  overflow: hidden;
+}
+
 #static_heading {
   margin-top: 60px;
 }
@@ -14,4 +29,14 @@
   background-color: white;
   padding: 2px;
   border: 3px solid black;
+}
+
+.emailText {
+  font-size: 24px;
+  display: inline;
+}
+
+.submitEmailBtn {
+  float: right;
+  display: inline;
 }

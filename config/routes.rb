@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   resources :static_pages do
     collection do
       get :savedToList
+      get :sendEmail
     end
   end
   resources :fashion do
@@ -23,6 +24,7 @@ Rails.application.routes.draw do
   get '/saved_list', to: 'fashion#saved_list'
   get '/help&support', to: 'static_pages#help&support'
   post 'static_pages/savedToList', to: 'static_pages#savedToList'
+  post 'static_pages/sendEmail', to: 'static_pages#sendEmail'
   post 'fashion/savedToListOrNot', to: 'fashion#savedToListOrNot'
   post 'fashion/moveForward', to: 'fashion#moveForward'
   post 'fashion/moveBackward', to: 'fashion#moveBackward'
