@@ -5,6 +5,8 @@ class StaticPagesController < ApplicationController
 
   @@classCollectionURLS = Array.new
   @@currentIndex = 0
+  # mailtrap.io/blog/rails-email-validation
+  REGEX_PATTERN = /^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+[A-Za-z]{2,6}$/
 
   def home
     @collectionURLS = Array.new
@@ -64,19 +66,35 @@ class StaticPagesController < ApplicationController
   end
 
   def sendEmail
+    puts "Got to send email"
     @email = params[:emailTyped]
-    puts @email
-    puts "Got to SENDEMAIL"
-    # from = Email.new(email: 's3786794@student.rmit.edu.au')
-    # to = Email.new(email: @email)
-    # subject = 'RAD2021 Assignment 2 Subscription'
-    # content = Content.new(type: 'text/plain', value: 'Thanks for subscribing!')
-    # mail = Mail.new(from, subject, to, content)
-    #
-    # sg = SendGrid::API.new(api_key: ENV['SENDGRID_API_KEY'])
-    # response = sg.client.mail._('send').post(request_body: mail.to_json)
-    # puts response.status_code
-    # puts response.body
-    # puts response.headers
+
+    if checkEmailRegex(@email)
+      puts @email
+      from = Email.new(email: 's3786794@student.rmit.edu.au')
+      to = Email.new(email: @email)
+      subject = 'RAD2021 Assignment 2 Subscription'
+      content = Content.new(type: 'text/plain', value: 'Thanks for subscribing!')
+      mail = Mail.new(from, subject, to, content)
+
+      sg = SendGrid::API.new(api_key: ENV['SENDGRID_API_KEY'])
+      response = sg.client.mail._('send').post(request_body: mail.to_json)
+      puts response.status_code
+      puts response.body
+      puts response.headers
+    else
+      puts "Invalid Email"
+    end
   end
+
+  def checkEmailRegex(email)
+    check = false
+
+    if REGEX_PATTERN.match email
+      check = true
+    end
+
+    return check
+  end
+
 end
