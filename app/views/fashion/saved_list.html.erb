@@ -1,14 +1,14 @@
 <% provide(:title, "Saved List") %>
 <h1 id="savedListHeading">Saved List</h1>
 <div id="collection_box" >
-  <div class="container_popular">
+  <div class="collection_container">
     <div class="row">
       <div class="col-xs-12 col-md-10 col-lg-8 col-centered">
         <div id="savedList" class="carousel slide" data-ride="carousel" data-interval="false">
           <div class="carousel-inner-saved-collection carousel-inner">
             <div class="carousel-caption">
               <div class="button_img_saved_list">
-                <%= button_to fashion_savedToListOrNot_path, :class=> "changeImg", :method=> :post do %>
+                <%= button_to fashion_savedToListOrNot_path, :class=> "change_img", :method=> :post do %>
                   <i id="buttonSaveCheck" type="button" class="glyphicon glyphicon-plus-sign"></i>
                 <% end %>
               </div>

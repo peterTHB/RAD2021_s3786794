@@ -1,21 +1,51 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  url_name: MyString
-  title: MyString
+  url_name: no_item
+  title: MyString1
   caption: MyString
   price: MyString
   human_type: MyString
-  popular: 1
+  popular: 2
   arrival: 1
   saved_to_list: false
 
 two:
-  url_name: MyString
-  title: MyString
+  url_name: no_item
+  title: MyString2
   caption: MyString
   price: MyString
   human_type: MyString
-  popular: 1
-  arrival: 1
+  popular: 4
+  arrival: 2
   saved_to_list: false
+
+three:
+  url_name: no_item
+  title: MyString3
+  caption: MyString
+  price: MyString
+  human_type: MyString
+  popular: 6
+  arrival: 3
+  saved_to_list: true
+
+four:
+  url_name: no_item
+  title: MyString4
+  caption: MyString
+  price: MyString
+  human_type: MyString
+  popular: 8
+  arrival: 4
+  saved_to_list: true
+
+five:
+  url_name: no_item
+  title: MyString5
+  caption: MyString
+  price: MyString
+  human_type: MyString
+  popular: 10
+  arrival: 5
+  saved_to_list: true

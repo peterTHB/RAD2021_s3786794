@@ -1,4 +1,6 @@
 class CollectionController < ApplicationController
+  # Respective methods to help populate the corresponding views
+  # with images related to the collection types
   def collection_index
     @allCollectionsURLS = Array.new
 

@@ -1,5 +1,7 @@
 <% provide(:title, "Home") %>
 <!--Item from shop collection-->
+<!--"Bootstrap Carousel", W3schools.com, 2021. [Online].
+    Available: https://www.w3schools.com/bootstrap/bootstrap_carousel.asp. [Accessed: 19- May- 2021].-->
 <div id="collection_box">
   <h1 id="collection_heading">Items</h1>
   <hr/>
@@ -8,10 +10,10 @@
       <div class="col-xs-12 col-md-10 col-lg-8 col-centered">
         <div id="shopCollectionCarousel" data-ride="carousel" class="carousel-fade" data-interval="false">
           <div class="carousel-inner-item-collection carousel-inner" role="listbox">
-            <div class="btnSaveToList carousel-caption">
+            <div class="btn_save_to_list carousel-caption">
               <a class="right carousel-control" href="#shopCollectionCarousel" role="button" data-slide="next">
                 <div class="button_img">
-                  <%= button_to savedToList_static_pages_path, :class=> "changeImg" do %>
+                  <%= button_to savedToList_static_pages_path, :class=> "change_img" do %>
                     <i id="buttonSave" class="glyphicon glyphicon-plus-sign"></i>
                   <% end %>
                 </div>
@@ -43,7 +45,9 @@
   </div>
 </div>
 
-<!--Item from popular-->
+<!--Item from popular collection-->
+<!--M. Melchers, "multiple items per slide in bootstrap carousel", 2021. [Online].
+    Available: https://codepen.io/mephysto/pen/ZYVKRY. [Accessed: 19- May- 2021].-->
 <div class="popular_container_box" id="collection_box">
   <h1 id="popular_heading">Popular</h1>
   <hr/>
@@ -53,22 +57,24 @@
         <div id="shopPopularCarousel" class="carousel slide multi-item-carousel
             carousel-fade" data-type="multi" data-interval="false" data-ride="carousel">
           <div class="carousel-inner">
-            <div class="popular_item_box popular_items item active">
-              <div class="col-xs-4 ">
-                <%= image_tag(@popularURLS.first, class: "popular_image_in_frame img-responsive center-block",
-                              :alt=>@popularURLS.first) %>
-                <div class="item_title"><%= Image.where(url_name: @popularURLS.first).pluck("title").first %></div>
-                <div class="item_price"><%= Image.where(url_name: @popularURLS.first).pluck("price").first %></div>
-              </div>
-            </div>
-            <% @popularURLS.drop(1).each do |item| %>
-              <div class="popular_item_box popular_items item">
-                <div class="col-xs-4">
-                  <%= image_tag(item, class: "popular_image_in_frame img-responsive center-block", :alt=>item) %>
-                  <div class="item_title"><%= Image.where(url_name: item).pluck("title").first %></div>
-                  <div class="item_price"><%= Image.where(url_name: item).pluck("price").first %></div>
+            <% if @popularURLS.first %>
+              <div class="popular_item_box popular_items item active">
+                <div class="col-xs-4 ">
+                  <%= image_tag(@popularURLS.first, class: "popular_image_in_frame img-responsive center-block",
+                                :alt=>@popularURLS.first) %>
+                  <div class="item_title"><%= Image.where(url_name: @popularURLS.first).pluck("title").first %></div>
+                  <div class="item_price"><%= Image.where(url_name: @popularURLS.first).pluck("price").first %></div>
                 </div>
               </div>
+              <% @popularURLS.drop(1).each do |item| %>
+                <div class="popular_item_box popular_items item">
+                  <div class="col-xs-4">
+                    <%= image_tag(item, class: "popular_image_in_frame img-responsive center-block", :alt=>item) %>
+                    <div class="item_title"><%= Image.where(url_name: item).pluck("title").first %></div>
+                    <div class="item_price"><%= Image.where(url_name: item).pluck("price").first %></div>
+                  </div>
+                </div>
+              <% end %>
             <% end %>
           </div>
 
@@ -98,34 +104,42 @@
     <hr/>
     <div class="collection_container">
       <div class="row">
-        <div class="col-xs-12 col-md-12 col-lg-12 col-centered">
+        <div class="col-xs-12 col-md-10 col-lg-8 col-centered">
           <div class="collection_item_box col-xs-3">
-            <a href="women">
-              <%= image_tag(@femaleURLS.first, class: "img-responsive center-block", :alt=>@femaleURLS.first) %>
-            </a>
-            <div class="collect_caption">Women</div>
-            <div class="collect_caption"><%= @femaleURLS.length %> Items</div>
+            <% if @femaleURLS.first %>
+              <a href="women">
+                <%= image_tag(@femaleURLS.first, class: "img-responsive center-block", :alt=>@femaleURLS.first) %>
+              </a>
+              <div class="collect_caption">Women</div>
+              <div class="collect_caption"><%= @femaleURLS.length %> Items</div>
+            <% end %>
           </div>
           <div class="collection_item_box col-xs-3">
-            <a href="men">
-              <%= image_tag(@menURLS.first, class: "img-responsive center-block", :alt=>@menURLS.first) %>
-            </a>
-            <div class="collect_caption">Men</div>
-            <div class="collect_caption"><%= @menURLS.length %> Items</div>
+            <% if @menURLS.first %>
+              <a href="men">
+                <%= image_tag(@menURLS.first, class: "img-responsive center-block", :alt=>@menURLS.first) %>
+              </a>
+              <div class="collect_caption">Men</div>
+              <div class="collect_caption"><%= @menURLS.length %> Items</div>
+            <% end %>
           </div>
           <div class="collection_item_box col-xs-3">
-            <a href="kids">
-              <%= image_tag(@kidsURLS.first, class: "img-responsive center-block", :alt=>@kidsURLS.first) %>
-            </a>
-            <div class="collect_caption">Kids</div>
-            <div class="collect_caption"><%= @kidsURLS.length %> Items</div>
+            <% if @kidsURLS.first %>
+              <a href="kids">
+                <%= image_tag(@kidsURLS.first, class: "img-responsive center-block", :alt=>@kidsURLS.first) %>
+              </a>
+              <div class="collect_caption">Kids</div>
+              <div class="collect_caption"><%= @kidsURLS.length %> Items</div>
+            <% end %>
           </div>
           <div class="collection_item_box col-xs-3">
-            <a href="new_arrivals">
-              <%= image_tag(@newArrivalsURLS.first, class: "img-responsive center-block", :alt=>@newArrivalsURLS.first) %>
-            </a>
-            <div class="collect_caption">New Arrivals</div>
-            <div class="collect_caption"><%= @newArrivalsURLS.length %> Items</div>
+            <% if @newArrivalsURLS.first %>
+              <a href="new_arrivals">
+                <%= image_tag(@newArrivalsURLS.first, class: "img-responsive center-block", :alt=>@newArrivalsURLS.first) %>
+              </a>
+              <div class="collect_caption">New Arrivals</div>
+              <div class="collect_caption"><%= @newArrivalsURLS.length %> Items</div>
+            <% end %>
           </div>
         </div>
       </div>
@@ -140,34 +154,34 @@
     <h4 id="newsletter_caption">Signup with our newsletter</h4>
     <div class="newsletter_container">
       <%= form_tag action: 'sendEmail' do %>
-        <p class="emailText">Enter email: <%= text_field_tag 'emailTyped', @email %> </p>
-        <div class="submitEmailBtn"><%= submit_tag 'Submit', :id => "emailSent", :class=> "btn", data: {disable_with: false} %></div>
+        <p class="email_text">Enter email: <%= text_field_tag 'emailTyped', @email %> </p>
+        <div class="submit_email_btn"><%= submit_tag 'Submit', :id => "emailSent", :class=> "btn", data: {disable_with: false} %></div>
       <% end %>
     </div>
   </div>
 </div>
 
 <script>
-  // Code borrowed from multiple Codepen.io users for multiple images on
-  // a carousel frame
-  // Instantiate the Bootstrap carousel
-  $('.multi-item-carousel').carousel({
-      interval: false
-  });
+    //Instantiate the Bootstrap carousel in Popular section
+    //M. Melchers, "multiple items per slide in bootstrap carousel", 2021. [Online].
+    // Available: https://codepen.io/mephysto/pen/ZYVKRY. [Accessed: 19- May- 2021].
+    $('.multi-item-carousel').carousel({
+        interval: false
+    });
 
-  $('.carousel[data-type="multi"] .item').each(function() {
-      var next = $(this).next();
-      if (!next.length) {
-          next = $(this).siblings(':first');
-      }
-      next.children(':first-child').clone().appendTo($(this));
+    $('.carousel[data-type="multi"] .item').each(function() {
+        var next = $(this).next();
+        if (!next.length) {
+            next = $(this).siblings(':first');
+        }
+        next.children(':first-child').clone().appendTo($(this));
 
-      for (var i = 0; i < 1; i++) {
-          next = next.next();
-          if (!next.length) {
-              next = $(this).siblings(':first');
-          }
-          next.children(':first-child').clone().appendTo($(this));
-      }
-  });
+        for (var i = 0; i < 1; i++) {
+            next = next.next();
+            if (!next.length) {
+                next = $(this).siblings(':first');
+            }
+            next.children(':first-child').clone().appendTo($(this));
+        }
+    });
 </script>

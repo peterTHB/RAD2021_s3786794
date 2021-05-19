@@ -175,6 +175,21 @@ footer ul li {
   margin-bottom: 5px;
 }
 
+#seeAllButton {
+  float: right;
+}
+
+.collect_caption {
+  padding-top: 10px;
+  text-align: center;
+  font-size: 16px;
+}
+
+.carousel-inner-item-collection > .item > img {
+  width: 75%;
+  height: 600px;
+}
+
 //.popular_image_in_frame {
 //  height: 400px;
 //  overflow: hidden;
@@ -211,20 +226,4 @@ footer ul li {
   min-height: 1px;
   padding: 5px;
   float: left;
-}
-// Code collection ends here
-
-#seeAllButton {
-  float: right;
-}
-
-.collect_caption {
-  padding-top: 10px;
-  text-align: center;
-  font-size: 16px;
-}
-
-.carousel-inner-item-collection > .item > img {
-  width: 75%;
-  height: 600px;
 }

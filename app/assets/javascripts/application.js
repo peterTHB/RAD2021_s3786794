@@ -19,15 +19,24 @@
 //= require bootstrap-sprockets
 //= require bootstrap
 
+// Javascript methods to help send data to corresponding
+// methods in the appropriate controllers
+
+// Method to send a request to the static_pages controller
+// to save item that current shows in Items banner
 $(document).on("click",'#buttonSave', function(){
     $.ajax("/static_pages/savedToList")
 });
 
+// Method to send a request to change a saved item's
+// state to either saved or not saved in view of
+// fashion/saved_list
 $(document).on("click", '#buttonSaveCheck', function(e){
     e.preventDefault();
     $.ajax("/fashion/savedToListOrNot")
 });
 
+// Helps move carousel in view of fashion/saved_list
 $(document).on("click", '#leftControl', function(e){
     e.preventDefault();
     $.ajax("/fashion/moveBackward")

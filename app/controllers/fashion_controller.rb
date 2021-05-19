@@ -2,6 +2,9 @@ class FashionController < ApplicationController
   @@imageSavedList
   @@currentIndex = 0
 
+  # Check if there is are images that have been saved
+  # by the user
+  # Otherwise, returns a no_item.png to the carousel
   def saved_list
     @savedToListModel = Array.new
 
@@ -18,6 +21,10 @@ class FashionController < ApplicationController
     end
   end
 
+  # Checks if current item is saved by the user
+  # If item has not been saved anymore, the corresponding image
+  # will stay in the view till a page refresh occurs, or the user
+  # comes back to the saved list at a later time
   def savedToListOrNot
     @currentImageInCarousel = @@imageSavedList.at(@@currentIndex)
 
@@ -26,6 +33,8 @@ class FashionController < ApplicationController
     image.save
   end
 
+  # Helper methods to move the carousel in the view
+  # forwards or backwards
   def moveForward
     if (@@currentIndex < @@imageSavedList.length - 1)
       @@currentIndex = @@currentIndex + 1
