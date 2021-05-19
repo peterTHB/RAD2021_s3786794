@@ -6,20 +6,20 @@ Heroku URL: https://hidden-refuge-64928.herokuapp.com/
 
 Heroku Log:
 
-2021-05-19T12:42:07.314456+00:00 heroku[router]: at=info method=GET path="/assets/kids_images/terricks-noah-n9R0MN3XGvY-unsplash-2df5b255cb34304c39d63b6634f026e0d7a7bd4512fd01d9bce0a1e1c8d6a93b.jpg" host=hidden-refuge-64928.herokuapp.com request_id=c8dbb198-dcc0-4911-b258-4d462453dbc7 fwd="101.186.50.39" dyno=web.1 connect=1ms service=57ms status=200 bytes=373406 protocol=https
-2021-05-19T12:42:07.370210+00:00 heroku[router]: at=info method=GET path="/assets/kids_images/sourav-ahmmad-fwJMG9zm3dI-unsplash-5236ab1708e9bf5430a269868efbecc855d15013e982d95bac87776a1d9d335d.jpg" host=hidden-refuge-64928.herokuapp.com request_id=d72f1c26-b1d9-4d85-8078-ea1ee422c56e fwd="101.186.50.39" dyno=web.1 connect=0ms service=101ms status=200 bytes=1652946 protocol=https
-2021-05-19T12:42:07.393731+00:00 heroku[router]: at=info method=GET path="/assets/men_images/zahir-namane-TjUJJACTav4-unsplash-3c59d549da7b3f124497d012eb00ecd113d053696de8887ef9e7851c396e9051.jpg" host=hidden-refuge-64928.herokuapp.com request_id=feaa2986-7ae4-4b03-b1ad-aa536eed14cd fwd="101.186.50.39" dyno=web.1 connect=1ms service=136ms status=200 bytes=1380785 protocol=https
-2021-05-19T12:42:10.002253+00:00 heroku[router]: at=info method=GET path="/assets/kids_images/sander-weeteling-Itbk3pUYhpY-unsplash-906247d33ef2ed70fa8b5586a5859d959b7af710a4240077a6480d04df7963e2.jpg" host=hidden-refuge-64928.herokuapp.com request_id=fbe0bed7-93e3-43b7-9b7b-da8777570981 fwd="101.186.50.39" dyno=web.1 connect=1ms service=217ms status=200 bytes=3689499 protocol=https
-2021-05-19T12:42:15.355430+00:00 heroku[router]: at=info method=GET path="/assets/men_images/asdrubal-luna-OenHGpOnsv0-unsplash-ad98ce41a076c05e1bd102606500f08ef50f1d737172db412bcb555859448eb9.jpg" host=hidden-refuge-64928.herokuapp.com request_id=38d09f45-de0b-4070-bf4b-0db0ca93c846 fwd="101.186.50.39" dyno=web.1 connect=0ms service=59ms status=200 bytes=1293187 protocol=https
-2021-05-19T12:42:17.118549+00:00 heroku[router]: at=info method=GET path="/assets/men_images/vine-ramazani-N2KtqMU-KAY-unsplash-e71b24be76445afa1f71884c3c5969d11b9df226e05964f3eea55060dd0f8636.jpg" host=hidden-refuge-64928.herokuapp.com request_id=46455697-47cd-49dc-90a1-acfec2c09f37 fwd="101.186.50.39" dyno=web.1 connect=0ms service=183ms status=200 bytes=1149405 protocol=https
-2021-05-19T12:42:17.277249+00:00 heroku[router]: at=info method=GET path="/assets/kids_images/ben-white-EMZxDosijJ4-unsplash-f87955a284b55e1e08a91bccc9552fb9c6fe1684d75f64a3286f9f2645764bea.jpg" host=hidden-refuge-64928.herokuapp.com request_id=0185618a-adcc-4029-9653-367bea3a7bcc fwd="101.186.50.39" dyno=web.1 connect=1ms service=157ms status=200 bytes=2901168 protocol=https
-2021-05-19T12:42:18.265288+00:00 heroku[router]: at=info method=GET path="/assets/women_images/marionel-luciano-f615lHRUJqw-unsplash-287285dde6bc63dc11525014d0c808b8d71bca8d5f3212d931139262865ef78b.jpg" host=hidden-refuge-64928.herokuapp.com request_id=ecab61a5-5d75-4796-b8ea-2fd946083ff3 fwd="101.186.50.39" dyno=web.1 connect=1ms service=191ms status=200 bytes=1863069 protocol=https
-2021-05-19T12:42:19.129035+00:00 heroku[router]: at=info method=GET path="/assets/women_images/monica-silva-VlMMBxSZuSI-unsplash-0d202394abf74627c58483a3b4efadcc11e08ea7565145f27f421fc975698001.jpg" host=hidden-refuge-64928.herokuapp.com request_id=f93f65d6-b8b9-40e5-ad18-7e0c2fb64dad fwd="101.186.50.39" dyno=web.1 connect=0ms service=166ms status=200 bytes=1550133 protocol=https
-2021-05-19T12:42:28.327601+00:00 heroku[router]: at=info method=GET path="/favicon.ico" host=hidden-refuge-64928.herokuapp.com request_id=eff312c5-77fa-47d4-950b-d9969379473a fwd="101.186.50.39" dyno=web.1 connect=0ms service=1ms status=200 bytes=143 protocol=https
+2021-05-19T14:40:50.629603+00:00 app[web.1]: I, [2021-05-19T14:40:50.629537 #4]  INFO -- : [9afed368-97b1-4335-930d-adedc1d6b7eb]   Parameters: {"utf8"=>"✓", "authenticity_token"=>"iS79t7/PtTTY7Q5ctepqqLLZLqG9mt6Hu81sQz85PIbPZSCv5HyUYFdB/wzQihIE9f9Zp1fq/UxEgP6+guAWWA==", "emailTyped"=>"tienb3774@gmail.com", "commit"=>"Submit"}
+2021-05-19T14:40:50.630898+00:00 app[web.1]: Got to send email
+2021-05-19T14:40:50.631193+00:00 app[web.1]: tienb3774@gmail.com
+2021-05-19T14:40:50.631225+00:00 app[web.1]: Valid Email
+2021-05-19T14:40:51.028279+00:00 app[web.1]: 202
+2021-05-19T14:40:51.033554+00:00 app[web.1]:
+2021-05-19T14:40:51.034843+00:00 app[web.1]: {"server"=>["nginx"], "date"=>["Wed, 19 May 2021 14:40:51 GMT"], "content-length"=>["0"], "connection"=>["close"], "x-message-id"=>["qP84a5BuQ4OCWWqxNtp1Jg"], "access-control-allow-origin"=>["https://sendgrid.api-docs.io"], "access-control-allow-methods"=>["POST"], "access-control-allow-headers"=>["Authorization, Content-Type, On-behalf-of, x-sg-elas-acl"], "access-control-max-age"=>["600"], "x-no-cors-reason"=>["https://sendgrid.com/docs/Classroom/Basics/API/cors.html"], "strict-transport-security"=>["max-age=600; includeSubDomains"]}
+2021-05-19T14:40:51.245893+00:00 app[web.1]: I, [2021-05-19T14:40:51.241896 #4]  INFO -- : [9afed368-97b1-4335-930d-adedc1d6b7eb] No template found for StaticPagesController#sendEmail, rendering head :no_content
+2021-05-19T14:40:51.246245+00:00 app[web.1]: I, [2021-05-19T14:40:51.246156 #4]  INFO -- : [9afed368-97b1-4335-930d-adedc1d6b7eb] Completed 204 No Content in 616ms (ActiveRecord: 0.0ms)
+2021-05-19T14:40:51.250763+00:00 heroku[router]: at=info method=POST path="/static_pages/sendEmail" host=hidden-refuge-64928.herokuapp.com request_id=9afed368-97b1-4335-930d-adedc1d6b7eb fwd="101.186.50.39" dyno=web.1 connect=0ms service=653ms status=204 bytes=623 protocol=https
 
 Time Log:
 
-User,Email,Client,Project,Task,Description,Billable,Start date,Start time,End date,End time,Duration,Tags,Amount ()
+User,,,,,,Email,Client,Project,Task,Description,Billable,Start date,Start time,End date,End time,Duration,Tags,Amount ()
 Peter Bui,s3786794@student.rmit.edu.au,,,,Implement hello into app as placeholder,No,2021-04-01,16:52:12,2021-04-01,16:56:10,00:03:58,Misc Additions,
 Peter Bui,s3786794@student.rmit.edu.au,,,,Database planning,No,2021-04-20,13:40:15,2021-04-20,13:45:28,00:05:13,,
 Peter Bui,s3786794@student.rmit.edu.au,,,,Basic deployment to heroku - Failed,No,2021-04-20,18:06:40,2021-04-20,18:34:32,00:27:52,,
@@ -62,5 +62,6 @@ Peter Bui,s3786794@student.rmit.edu.au,,,,Configuring Sendgrid in Heroku,No,2021
 Peter Bui,s3786794@student.rmit.edu.au,,,,Sendgrid debugging,No,2021-05-19,18:58:40,2021-05-19,19:19:40,00:21:00,,
 Peter Bui,s3786794@student.rmit.edu.au,,,,Citations,No,2021-05-19,21:00:14,2021-05-19,21:31:14,00:31:00,,
 Peter Bui,s3786794@student.rmit.edu.au,,,,Commenting,No,2021-05-19,22:16:44,2021-05-19,22:38:48,00:22:04,,
+Peter Bui,s3786794@student.rmit.edu.au,,,,Pages debugging,No,2021-05-19,23:51:39,2021-05-20,00:40:08,00:48:29,,
 
 Git Repo: https://github.com/s3786794/RAD2021_s3786794
