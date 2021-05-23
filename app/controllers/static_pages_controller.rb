@@ -82,8 +82,6 @@ class StaticPagesController < ApplicationController
   def sendEmail
     @email = params[:emailTyped]
 
-    puts "ENV: #{ENV['SENDGRID_API_KEY']}"
-
     if checkEmailRegex(@email)
       from = Email.new(email: 's3786794@student.rmit.edu.au')
       to = Email.new(email: @email)
