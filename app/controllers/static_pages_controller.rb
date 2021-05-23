@@ -80,11 +80,11 @@ class StaticPagesController < ApplicationController
   # Sendgrid.com, 2021. [Online]. Available: https://sendgrid.com/docs/for-developers/sending-email/rubyonrails/.
   # [Accessed: 19- May- 2021].
   def sendEmail
-    puts "Got to send email"
     @email = params[:emailTyped]
 
+    puts "ENV: #{ENV['SENDGRID_API_KEY']}"
+
     if checkEmailRegex(@email)
-      puts "Valid Email"
       from = Email.new(email: 's3786794@student.rmit.edu.au')
       to = Email.new(email: @email)
       subject = 'RAD2021 Assignment 2 Subscription'
