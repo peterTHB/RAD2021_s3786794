@@ -6,16 +6,16 @@ Heroku URL: https://hidden-refuge-64928.herokuapp.com/
 
 Heroku Log:
 
-2021-05-23T02:27:44.546701+00:00 app[web.1]: D, [2021-05-23T02:27:44.546619 #4] DEBUG -- : [fc0df989-a8eb-4335-9e18-15c92015028b]   [1m[35mCACHE  (0.1ms)[0m  [1m[34mSELECT "images"."price" FROM "images" WHERE "images"."url_name" = $1[0m  [["url_name", "men_images/zahir-namane-TjUJJACTav4-unsplash.jpg"]]
-2021-05-23T02:27:44.548128+00:00 app[web.1]: I, [2021-05-23T02:27:44.548048 #4]  INFO -- : [fc0df989-a8eb-4335-9e18-15c92015028b]   Rendered static_pages/home.html.erb within layouts/application (57.4ms)
-2021-05-23T02:27:44.550389+00:00 app[web.1]: I, [2021-05-23T02:27:44.550307 #4]  INFO -- : [fc0df989-a8eb-4335-9e18-15c92015028b]   Rendered layouts/_header.html.erb (0.5ms)
-2021-05-23T02:27:44.551183+00:00 app[web.1]: I, [2021-05-23T02:27:44.551094 #4]  INFO -- : [fc0df989-a8eb-4335-9e18-15c92015028b]   Rendered layouts/_footer.html.erb (0.2ms)
-2021-05-23T02:27:44.551526+00:00 app[web.1]: I, [2021-05-23T02:27:44.551423 #4]  INFO -- : [fc0df989-a8eb-4335-9e18-15c92015028b] Completed 200 OK in 131ms (Views: 35.2ms | ActiveRecord: 46.3ms)
-2021-05-23T02:27:44.552011+00:00 app[web.1]: /app/vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/middleware/cookies.rb:647: warning: Using the last argument as keyword parameters is deprecated; maybe ** should be added to the call
-2021-05-23T02:27:44.552015+00:00 app[web.1]: /app/vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.6/lib/active_support/message_encryptor.rb:150: warning: The called method `encrypt_and_sign' is defined here
-2021-05-23T02:27:44.552119+00:00 app[web.1]: /app/vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.6/lib/active_support/message_encryptor.rb:175: warning: Using the last argument as keyword parameters is deprecated; maybe ** should be added to the call
-2021-05-23T02:27:44.552120+00:00 app[web.1]: /app/vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.6/lib/active_support/messages/metadata.rb:17: warning: The called method `wrap' is defined here
-2021-05-23T02:27:44.553545+00:00 heroku[router]: at=info method=GET path="/" host=hidden-refuge-64928.herokuapp.com request_id=fc0df989-a8eb-4335-9e18-15c92015028b fwd="101.186.50.39" dyno=web.1 connect=1ms service=137ms status=200 bytes=20051 protocol=https
+2021-05-23T02:40:30.267184+00:00 app[web.1]: I, [2021-05-23T02:40:30.267084 #4]  INFO -- : [4cb38248-3da3-48d3-8e60-c77bc02c7bf5] Started POST "/static_pages/sendEmail" for 101.186.50.39 at 2021-05-23 02:40:30 +0000
+2021-05-23T02:40:30.268684+00:00 app[web.1]: I, [2021-05-23T02:40:30.268613 #4]  INFO -- : [4cb38248-3da3-48d3-8e60-c77bc02c7bf5] Processing by StaticPagesController#sendEmail as HTML
+2021-05-23T02:40:30.271713+00:00 app[web.1]: I, [2021-05-23T02:40:30.271610 #4]  INFO -- : [4cb38248-3da3-48d3-8e60-c77bc02c7bf5]   Parameters: {"utf8"=>"✓", "authenticity_token"=>"c04jRP5NNCwWbSwufewinOd8frSaMQLDX+zEVP8UrxSzGyhY3C+kYojAVk1bQAspmn4FCv/O6EXw0dYaQOhmOw==", "emailTyped"=>"tienb3774@gmail.com", "commit"=>"Submit"}
+2021-05-23T02:40:30.272518+00:00 app[web.1]: tienb3774@gmail.com
+2021-05-23T02:40:30.597158+00:00 app[web.1]: 202
+2021-05-23T02:40:30.601608+00:00 app[web.1]:
+2021-05-23T02:40:30.601796+00:00 app[web.1]: {"server"=>["nginx"], "date"=>["Sun, 23 May 2021 02:40:30 GMT"], "content-length"=>["0"], "connection"=>["close"], "x-message-id"=>["RDaO3YjESyuWLIOINinxQA"], "access-control-allow-origin"=>["https://sendgrid.api-docs.io"], "access-control-allow-methods"=>["POST"], "access-control-allow-headers"=>["Authorization, Content-Type, On-behalf-of, x-sg-elas-acl"], "access-control-max-age"=>["600"], "x-no-cors-reason"=>["https://sendgrid.com/docs/Classroom/Basics/API/cors.html"], "strict-transport-security"=>["max-age=600; includeSubDomains"]}
+2021-05-23T02:40:30.701080+00:00 app[web.1]: I, [2021-05-23T02:40:30.700941 #4]  INFO -- : [4cb38248-3da3-48d3-8e60-c77bc02c7bf5] No template found for StaticPagesController#sendEmail, rendering head :no_content
+2021-05-23T02:40:30.701416+00:00 app[web.1]: I, [2021-05-23T02:40:30.701300 #4]  INFO -- : [4cb38248-3da3-48d3-8e60-c77bc02c7bf5] Completed 204 No Content in 429ms (ActiveRecord: 0.0ms)
+2021-05-23T02:40:30.702467+00:00 heroku[router]: at=info method=POST path="/static_pages/sendEmail" host=hidden-refuge-64928.herokuapp.com request_id=4cb38248-3da3-48d3-8e60-c77bc02c7bf5 fwd="101.186.50.39" dyno=web.1 connect=3ms service=451ms status=204 bytes=621 protocol=https
 
 Time Log:
 
